@@ -5,9 +5,9 @@
         <site-logo />
       </nuxt-link>
 
-      <div class="nav-items">
-        <ol>
-          <li v-for="(item, i) in menu" :key="i">
+      <div class="nav-item-container">
+        <ol class="nav-item-list">
+          <li v-for="(item, i) in menu" :key="i" class="nav-items">
             {{ item.name }}
           </li>
         </ol>
@@ -71,15 +71,27 @@ export default {
   z-index: 12;
 }
 
-.nav-items {
+.nav-item-container {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
 
   ol {
+    display: flex;
     padding: 0px;
     margin: 0px;
     list-style: none;
+  }
+
+  .nav-items {
+    position: relative;
+    font-size: 13px;
+    counter-increment: item 1;
+    margin: 0px 10px;
+
+    .nav-link {
+      padding: 12px 10px;
+    }
   }
 }
 </style>
