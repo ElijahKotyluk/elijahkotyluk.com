@@ -1,6 +1,6 @@
 # elijahkotyluk
 
-> Personal website/portfolio
+> Static portfolio/blog
 
 ## Build Setup
 
