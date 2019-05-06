@@ -30,8 +30,8 @@ export default {
 
 <style lang="scss" scoped>
 .dot-nav {
-  position: absolute;
-  top: 50%; left: 90%;
+  position: fixed;
+  top: 50%; right: 0;
   transform: translate(-50%, -50%);
 }
 /* Fin Init */

@@ -3,10 +3,11 @@
     id="svg4548"
     xmlns:svg="http://www.w3.org/2000/svg"
     xmlns="http://www.w3.org/2000/svg"
-    width="46.922394"
-    height="47.011543"
-    viewBox="0 0 12.414884 12.438471"
+    width="57.65"
+    height="57.53"
+    viewBox="0 0 12 13"
   >
+    <!-- width="120" height="120" viewBox="0 0 25 13" -->
     <defs id="defs4542">
       <linearGradient
         id="linearGradient6619"

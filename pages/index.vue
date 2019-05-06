@@ -1,24 +1,31 @@
 <template>
   <div class="container">
     <intro />
+    <about />
+    <projects />
   </div>
 </template>
 
 <script>
 import Intro from '~/components/sections/Intro.vue'
+import About from '~/components/sections/About.vue'
+import Projects from '~/components/sections/Projects.vue'
 
 export default {
   components: {
-    Intro
+    Intro,
+    About,
+    Projects
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
