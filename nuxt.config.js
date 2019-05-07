@@ -1,5 +1,30 @@
 import pkg from './package'
 
+const fs = require('fs')
+
+ // Array where we will push our routes to:
+const routesArray = []
+
+ // Create variable to contain array of markdown files read in our articles directory:
+const files = fs.readdirSync('./static/articles')
+
+ // Create a route for each file and push that route to routesArray:
+const createRoutesArray = () => {
+  files.forEach((file) => {
+
+    let name = file.substr(0, file.lastIndexOf('.'))
+    let route = '/articles/' + name
+
+     routesArray.push(route)
+  })
+}
+
+ const getSlugs = (article, index) => {
+  let slug = article.substr(0, article.lastIndexOf('.'))
+  return `/articles/${slug}`
+}
+
+
 export default {
   mode: 'universal',
 
@@ -40,8 +65,18 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    ['@nuxtjs/markdownit', { linkify: true }]
   ],
+
+  /*
+  ** Generate static routes:
+  */
+  generate: {
+    routes: function() {
+      return files.map(getSlugs)
+    }
+  },
 
   /*
   ** Build configuration
