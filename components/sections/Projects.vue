@@ -5,6 +5,11 @@
         Things I've Built
       </h3>
     </div>
+    <div class="projects-content-container">
+      <h1>
+        Project Content
+      </h1>
+    </div>
   </section>
 </template>
 
