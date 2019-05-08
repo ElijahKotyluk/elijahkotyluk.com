@@ -35,13 +35,28 @@ export default {
         },
         {
           title: 'onyx',
+          description: 'Basic Javascript unit testing library.',
+          technologies: ['Javascript']
+        },
+        {
+          title: 'vue-firebase-chat',
+          description: 'Simple chat application built with firebase',
+          technologies: ['Vue.js', 'Vuex', 'Firebase']
+        },
+        {
+          title: 'vue-moment-calendar',
           description: 'Basic event calendar created with Vue, Moment, Flask, NDB',
           technologies: ['Vue.js', 'Vuex', 'Moment.js', 'Flask', 'NDB']
         },
         {
+          title: 'onyx',
+          description: 'Basic Javascript unit testing library.',
+          technologies: ['Javascript']
+        },
+        {
           title: 'vue-firebase-chat',
-          description: 'Basic event calendar created with Vue, Moment, Flask, NDB',
-          technologies: ['Vue.js', 'Vuex', 'Moment.js', 'Flask', 'NDB']
+          description: 'Simple chat application built with firebase',
+          technologies: ['Vue.js', 'Vuex', 'Firebase']
         }
       ]
     }
@@ -80,7 +95,7 @@ export default {
     width: 100%;
     white-space: nowrap;
     font-size: 32px;
-    margin: 10px 0px 40px;
+    margin: 10px 0px;
 
     &::after {
       content: "";
@@ -96,9 +111,8 @@ export default {
 }
 
 .projects-content-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  position: relative;
-  gap: 15px 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 </style>

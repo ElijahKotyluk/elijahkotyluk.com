@@ -2,12 +2,12 @@
   <div class="project-card-container">
     <div class="project-card-inner">
       <div class="card-header">
-        <h4>
+        <h4 class="card-title">
           {{ title }}
         </h4>
       </div>
       <div class="card-content">
-        <p>
+        <p class="card-description">
           {{ description }}
         </p>
         <ul class="tech-stack">
@@ -48,6 +48,8 @@ export default {
 
 <style lang="scss" scoped>
 .project-card-container {
+  max-width: 300px;
+  margin: 10px 10px;
   transition-delay: 0ms;
   visibility: visible;
   opacity: 1;
@@ -68,5 +70,41 @@ export default {
   padding: 25px;
   border-radius: 2px;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
+  .card-header {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: flex-end;
+
+    .card-title {
+      font-size: 22px;
+      color: rgb(204, 214, 246);
+      margin: 0px 0px 10px;
+    }
+  }
+
+  .card-description {
+    font-size: 17px;
+    text-align: left;
+  }
+}
+
+.tech-stack {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  .tech-stack-item {
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-size: 12px;
+    color: rgb(168, 178, 209);
+    line-height: 1.75;
+    margin-right: 12px;
+  }
 }
 </style>
