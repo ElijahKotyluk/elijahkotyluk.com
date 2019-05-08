@@ -43,12 +43,28 @@ export default {
   .article-content {
     max-width: 850px;
     text-align: left;
+
+    h1 {
+      text-align: center;
+      margin: 20px auto;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
     p {
       text-align: left;
     }
 
     pre {
       background-color: rgba(0, 0, 0, 1);
+      border-radius: 5px;
+      padding: 15px;
+
+      code.language-javascript {
+        span.hljs-keyword {
+          color: rgba(50, 10, 90, 1);
+        }
+      }
     }
   }
 }
