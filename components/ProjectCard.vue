@@ -1,14 +1,72 @@
 <template>
   <div class="project-card-container">
-    
+    <div class="project-card-inner">
+      <div class="card-header">
+        <h4>
+          {{ title }}
+        </h4>
+      </div>
+      <div class="card-content">
+        <p>
+          {{ description }}
+        </p>
+        <ul class="tech-stack">
+          <li
+            v-for="(item, i) in technologies"
+            :key="i"
+            class="tech-stack-item"
+          >
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ProjectCard'
+  name: 'ProjectCard',
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    description: {
+      type: String,
+      default: ''
+    },
+    technologies: {
+      type: Array,
+      default: function () {
+        return []
+      }
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+.project-card-container {
+  transition-delay: 0ms;
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.project-card-inner {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  height: 100%;
+  background-color: rgb(23, 42, 69);
+  padding: 25px;
+  border-radius: 2px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
 </style>
