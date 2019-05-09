@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="navbar" :class="{ 'navbar--hidden': !showNavbar }">
     <div class="nav">
       <nuxt-link to="/">
         <site-logo />
@@ -8,7 +8,9 @@
       <div class="nav-item-container">
         <ol class="nav-item-list">
           <li v-for="(item, i) in menu" :key="i" class="nav-items">
-            {{ item.name }}
+            <a>
+              {{ item.name }}
+            </a>
           </li>
         </ol>
       </div>
@@ -28,25 +30,53 @@ export default {
     return {
       menu: [
         {
-          name: 'About'
+          name: 'About',
+          to: '#about'
         },
         {
-          name: 'Projects'
+          name: 'Projects',
+          to: '#projects'
         },
         {
-          name: 'Articles'
+          name: 'Articles',
+          to: '#articles'
         },
         {
           name: 'Skills'
         }
-      ]
+      ],
+      showNavbar: true,
+      lastScrollPos: 0
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  methods: {
+    onScroll() {
+      // Get current scroll position
+      const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop
+
+      // If less than 0, stop
+      if (currentScrollPos < 0) {
+        return
+      }
+
+      // Determine whether to show or hide navbar
+      this.showNavbar = currentScrollPos < this.lastScrollPos
+
+      // Set current scroll position as last scroll position
+      this.lastScrollPos = currentScrollPos
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.header {
+.navbar {
   height: 100px;
   width: 100%;
   align-items: center;
@@ -56,7 +86,13 @@ export default {
   -webkit-box-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  transform: translate3d(0, 0, 0);
+  transition: 0.45s all ease-out;
+}
+
+.navbar.navbar--hidden {
+  box-shadow: none;
+  transform: translate3d(0, -100%, 0);
 }
 
 .nav {
