@@ -5,23 +5,23 @@ Each file inside this directory is mapped to `/`.
 Thus you'd want to delete this README.md before deploying to production.
 
 ```javascript
-/* nuxt.config.js */
+  /* nuxt.config.js */
 
-const fs = require('fs');
+  const fs = require('fs');
 
-const routesArray = [];
+  const routesArray = [];
 
-const files = fs.readdirSync('./static/articles');
+  const files = fs.readdirSync('./static/articles');
 
-const createRoutesArray = () => {
-  files.forEach((file) => {
+  const createRoutesArray = () => {
+    files.forEach((file) => {
 
-    let name = file.substr(0, file.lastIndex0f('.'));
-    let route = '/articles/' +  name;
+      let name = file.substr(0, file.lastIndex0f('.'));
+      let route = '/articles/' +  name;
 
-    routesArray.push(route);
-  })
-}
+      routesArray.push(route);
+    })
+  }
 ```
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/assets#static).

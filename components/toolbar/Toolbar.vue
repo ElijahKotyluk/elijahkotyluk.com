@@ -4,47 +4,23 @@
       <nuxt-link to="/">
         <site-logo />
       </nuxt-link>
-
-      <div class="nav-item-container">
-        <ol class="nav-item-list">
-          <li v-for="(item, i) in menu" :key="i" class="nav-items">
-            <a>
-              {{ item.name }}
-            </a>
-          </li>
-        </ol>
-      </div>
+      <navigation />
     </div>
   </div>
 </template>
 
 <script>
-import SiteLogo from '~/components/icons/SiteLogo.vue'
+import SiteLogo from '../icons/SiteLogo.vue'
+import Navigation from './Navigation.vue'
 
 export default {
   name: 'Toolbar',
   components: {
-    SiteLogo
+    SiteLogo,
+    Navigation
   },
   data() {
     return {
-      menu: [
-        {
-          name: 'About',
-          to: '#about'
-        },
-        {
-          name: 'Projects',
-          to: '#projects'
-        },
-        {
-          name: 'Articles',
-          to: '#articles'
-        },
-        {
-          name: 'Skills'
-        }
-      ],
       showNavbar: true,
       lastScrollPos: 0
     }
@@ -75,19 +51,16 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .navbar {
   height: 100px;
   width: 100%;
-  align-items: center;
-  padding: 0px 50px;
+  padding: 0px 15px;
   display: flex;
   position: fixed;
+  align-items: center;
   -webkit-box-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
-  transform: translate3d(0, 0, 0);
-  transition: 0.45s all ease-out;
 }
 
 .navbar.navbar--hidden {
@@ -105,29 +78,5 @@ export default {
   width: 100%;
   counter-reset: item 0;
   z-index: 12;
-}
-
-.nav-item-container {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-
-  ol {
-    display: flex;
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-  }
-
-  .nav-items {
-    position: relative;
-    font-size: 13px;
-    counter-increment: item 1;
-    margin: 0px 10px;
-
-    .nav-link {
-      padding: 12px 10px;
-    }
-  }
 }
 </style>

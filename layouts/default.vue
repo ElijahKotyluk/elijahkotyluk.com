@@ -1,22 +1,16 @@
 <template>
   <div class="app-container">
     <toolbar />
-    <dot-nav />
-    <social-icons />
     <nuxt />
   </div>
 </template>
 
 <script>
-import Toolbar from '~/components/Toolbar.vue'
-import DotNav from '~/components/DotNav.vue'
-import SocialIcons from '~/components/icons/SocialIcons.vue'
+import Toolbar from '~/components/toolbar/Toolbar.vue'
 
 export default {
   components: {
-    Toolbar,
-    DotNav,
-    SocialIcons
+    Toolbar
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <section class="section-container">
     <div class="heading-container">
-      <h3 class="projects-heading">
+      <h3 id="projects" class="projects-heading">
         Things I've Built
       </h3>
     </div>
@@ -29,9 +29,9 @@ export default {
     return {
       projects: [
         {
-          title: 'vue-moment-calendar',
+          title: 'vue-flask-calendar',
           description: 'Basic event calendar created with Vue, Moment, Flask, NDB',
-          technologies: ['Vue.js', 'Vuex', 'Moment.js', 'Flask', 'NDB']
+          technologies: ['Vue.js', 'Vuex', 'Moment.js', 'Flask', 'NDB', 'SCSS']
         },
         {
           title: 'onyx',
@@ -39,24 +39,24 @@ export default {
           technologies: ['Javascript']
         },
         {
-          title: 'vue-firebase-chat',
-          description: 'Simple chat application built with firebase',
-          technologies: ['Vue.js', 'Vuex', 'Firebase']
+          title: 'vue-weather-app',
+          description: 'Weather application that requests the user\'s geolocation and displays the local weather.',
+          technologies: ['Vue.js', 'Vuex', 'Firebase', 'Materialize.css']
         },
         {
-          title: 'vue-moment-calendar',
-          description: 'Basic event calendar created with Vue, Moment, Flask, NDB',
+          title: 'vue-firebase-chat',
+          description: 'Basic realtime chat application.',
           technologies: ['Vue.js', 'Vuex', 'Moment.js', 'Flask', 'NDB']
         },
         {
-          title: 'onyx',
-          description: 'Basic Javascript unit testing library.',
-          technologies: ['Javascript']
+          title: 'vue-calendar',
+          description: 'Static event calendar.',
+          technologies: ['Vue.js', 'Vuex', 'Moment.js', 'SCSS']
         },
         {
-          title: 'vue-firebase-chat',
-          description: 'Simple chat application built with firebase',
-          technologies: ['Vue.js', 'Vuex', 'Firebase']
+          title: 'vue-gcloud-scaffold',
+          description: 'Vue.js scaffold with webpack, vuex, vue-router for easy static deployment to Google App Engine.',
+          technologies: ['Vue', 'Webpack']
         }
       ]
     }
@@ -95,7 +95,7 @@ export default {
     width: 100%;
     white-space: nowrap;
     font-size: 32px;
-    margin: 10px 0px;
+    margin: 10px 0px 40px;
 
     &::after {
       content: "";
@@ -104,7 +104,7 @@ export default {
       width: 300px;
       background-color: rgb(45, 57, 82);
       position: relative;
-      top: 0px;
+      top: 5px;
       margin-left: 20px;
     }
   }

@@ -1,21 +1,15 @@
 <template>
   <div class="container">
     <intro />
-    <about />
-    <projects />
   </div>
 </template>
 
 <script>
 import Intro from '~/components/sections/Intro.vue'
-import About from '~/components/sections/About.vue'
-import Projects from '~/components/sections/Projects.vue'
 
 export default {
   components: {
-    Intro,
-    About,
-    Projects
+    Intro
   }
 }
 </script>
@@ -23,22 +17,18 @@ export default {
 <style lang="scss">
 .container {
   margin: 0 auto;
+  min-width: 100%;
   min-height: 100%;
+  padding: 0px 25px;
+  display: block;
+}
+
+.maybe-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 60px;
-  color: #35495e;
-  letter-spacing: 1px;
 }
 
 .subtitle {

@@ -1,20 +1,20 @@
 <template>
   <section class="section-container">
     <div class="heading-container">
-      <h3 class="about-heading">
+      <h3 id="about" class="about-heading">
         About Me
       </h3>
     </div>
     <div class="about-container">
       <div class="about-content">
         <p>
-          Hello! I'm Elijah, a software engineer based in California who enjoys learning and building new things. I develop performant web apps that provide intuitive user interfaces with efficient and modern backend architecture.
+          Hello! I'm Elijah, a software engineer based in California with a serious passion for problem solving and programming. I develop performant applications that provide intuitive, dynamic user interfaces coupled with efficient and modern backend architecture.
         </p>
         <p>
           When I'm not building a prototype application for a client, I'm contributing to open source and working on writing my own libraries and frameworks.
         </p>
         <p>
-          Here are some of technologies I've recently worked with:
+          Here are some of technologies that I work with:
         </p>
         <ul class="about-skills-container">
           <li v-for="(skill, i) in skills" :key="i" class="about-skills">
@@ -31,7 +31,9 @@ export default {
   name: 'About',
   data() {
     return {
-      skills: ['JavaScript', 'Vue.js/Nuxt.js', 'React', 'Node.js', 'Webpack', 'MongoDB', 'Python', 'Flask', 'NDB', 'Make GNU', 'HTML5', 'SCSS/SASS']
+      skills: [
+        'JavaScript', 'Vue/Nuxt', 'React', 'Node.js', 'Webpack', 'MongoDB', 'Python', 'Flask', 'NDB', 'Make GNU', 'HTML5', 'SCSS/SASS'
+      ]
     }
   }
 }
