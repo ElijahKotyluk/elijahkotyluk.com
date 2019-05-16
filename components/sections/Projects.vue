@@ -46,7 +46,7 @@ export default {
         {
           title: 'vue-firebase-chat',
           description: 'Basic realtime chat application.',
-          technologies: ['Vue.js', 'Vuex', 'Moment.js', 'Flask', 'NDB']
+          technologies: ['Vue.js', 'Firebase', 'Materialize.css']
         },
         {
           title: 'vue-calendar',
@@ -65,18 +65,6 @@ export default {
 </script>
 
 <style lang="scss">
-.section-container {
-  max-width: 1000px;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0px auto;
-  padding: 150px 0px;
-}
-
 .heading-container {
   position: relative;
   display: flex;

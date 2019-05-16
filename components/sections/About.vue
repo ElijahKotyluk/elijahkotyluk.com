@@ -1,26 +1,28 @@
 <template>
   <section class="section-container">
-    <div class="heading-container">
-      <h3 id="about" class="about-heading">
-        About Me
-      </h3>
-    </div>
     <div class="about-container">
-      <div class="about-content">
-        <p>
-          Hello! I'm Elijah, a software engineer based in California with a serious passion for problem solving and programming. I develop performant applications that provide intuitive, dynamic user interfaces coupled with efficient and modern backend architecture.
-        </p>
-        <p>
-          When I'm not building a prototype application for a client, I'm contributing to open source and working on writing my own libraries and frameworks.
-        </p>
-        <p>
-          Here are some of technologies that I work with:
-        </p>
-        <ul class="about-skills-container">
-          <li v-for="(skill, i) in skills" :key="i" class="about-skills">
-            {{ skill }}
-          </li>
-        </ul>
+      <div class="heading-container">
+        <h3 id="about" class="about-heading">
+          About Me
+        </h3>
+      </div>
+      <div class="about-content-container">
+        <div class="about-content">
+          <p>
+            Hello! I'm Elijah, a software engineer based in California with a serious passion for problem solving and programming. I develop performant applications that provide intuitive, dynamic user interfaces coupled with efficient and modern backend architecture.
+          </p>
+          <p>
+            When I'm not building a prototype application for a client, I'm contributing to open source and working on writing my own libraries and frameworks.
+          </p>
+          <p>
+            Here are some of technologies that I work with:
+          </p>
+          <ul class="about-skills-container">
+            <li v-for="(skill, i) in skills" :key="i" class="about-skills">
+              {{ skill }}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -40,16 +42,6 @@ export default {
 </script>
 
 <style lang="scss">
-.section-container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .heading-container {
   display: flex;
   flex-direction: row;
@@ -78,26 +70,32 @@ export default {
   margin-left: 15px;
 }
 
-.about-container {
+.about-content-container {
   display: flex;
-  flex-direction: row;
   -webkit-box-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
-  align-items: flex-start;
   text-align: left;
 }
 
 .about-content {
   width: 60%;
   max-width: 1000px;
+
+  @media (max-width:600px) {
+    width: 100%;
+  }
 }
 
 .about-skills-container {
   display: grid;
   grid-template-columns: minmax(140px, 200px) minmax(140px, 200px) minmax(140px, 200px);
   margin-top: 20px;
-  overflow: hidden;
+
+  @media (max-width:425px) {
+    grid-template-columns: minmax(100px, 150px) minmax(100px, 150px) minmax(100px, 150px);
+    margin-top: 20px;
+  }
 
   .about-skills {
     position: relative;
@@ -111,9 +109,17 @@ export default {
       content: "▹";
       position: absolute;
       left: 0px;
-      color: rgb(100, 255, 218);
+      color: rgb(99, 190, 255);
       font-size: 14px;
       line-height: 12px;
+    }
+
+    @media (max-width:425px) {
+      padding-left: 12px;
+
+      &::before {
+        line-height: 16px;
+      }
     }
   }
 }
