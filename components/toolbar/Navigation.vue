@@ -1,44 +1,53 @@
 <template>
   <nav class="nav-item-container">
-    <responsive-menu />
+    <a id="hamburger" :class="{ 'active': !isActive }" href="#" @click="toggleSidebar()"><span></span></a>
     <ol class="nav-item-list">
       <li v-for="(item, i) in menu" :key="i" class="nav-items">
         <a :href="item.to">
-          {{ item.name }}
+          {{ item.title }}
         </a>
       </li>
     </ol>
+    <sidebar :showSidebar="showSidebar" :menu="menu" />
   </nav>
 </template>
 
 <script>
-import ResponsiveMenu from './ResponsiveMenu.vue'
+import Sidebar from './Sidebar.vue'
 
 export default {
   name: 'Navigation',
   components: {
-    ResponsiveMenu
+    Sidebar
   },
   data() {
     return {
       menu: [
         {
-          name: 'About',
+          title: 'About',
           to: '#about'
         },
         {
-          name: 'Projects',
+          title: 'Projects',
           to: '#projects'
         },
         {
-          name: 'Articles',
+          title: 'Articles',
           to: '#articles'
         },
         {
-          name: 'Contact',
+          title: 'Contact',
           to: '#contact'
         }
-      ]
+      ],
+      showSidebar: false,
+      isActive: true
+    }
+  },
+  methods: {
+    toggleSidebar() {
+      console.log('clicked')
+      this.isActive = !this.isActive
     }
   }
 }
@@ -71,40 +80,55 @@ export default {
       padding: 12px 10px;
     }
   }
+}
 
-  .responsive {
-    display: flex;
-    height: 100%;
-    width: 30px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#hamburger {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  margin-right: 15px;
 
-    @media (min-width:600px) {
-      display: none;
-    }
-
-    .menu-button,
-    .menu-button::before,
-    .menu-button::after {
-      display: block;
-      background-color: #fff;
-      position: absolute;
-      height: 4px;
-      width: 30px;
-      transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-      border-radius: 2px;
-    }
-
-    .menu-button::before {
-      content: '';
-      margin-top: -8px;
-    }
-
-    .menu-button::after {
-      content: '';
-      margin-top: 8px;
-    }
+  @media(min-width: 600px) {
+    display: none;
   }
+}
+#hamburger span, #hamburger span:before, #hamburger span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 1.5px;
+  width: 35px;
+  background: rgba(25, 209, 255, .7);
+  position: absolute;
+  display: inline-block;
+  content: '';
+}
+#hamburger span:before {
+  top: -10px;
+}
+#hamburger span:after {
+  bottom: -10px;
+}
+/*
+#hamburger span, #hamburger span:before, #hamburger span:after {
+  transition: all 200ms ease-in-out;
+}
+*/
+#hamburger span, #hamburger span:before, #hamburger span:after {
+-webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+   -moz-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+     -o-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+}
+#hamburger.active span {
+  background-color: transparent;
+}
+#hamburger.active span:before, #hamburger.active span:after {
+  top: 0;
+}
+#hamburger.active span:before {
+  transform: rotate(45deg);
+}
+#hamburger.active span:after {
+  transform: translateY(-10px) rotate(-45deg);
+  top: 10px;
 }
 </style>

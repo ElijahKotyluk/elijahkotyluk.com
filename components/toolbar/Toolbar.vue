@@ -76,7 +76,6 @@ export default {
   align-items: center;
   position: relative;
   width: 100%;
-  counter-reset: item 0;
   z-index: 12;
 }
 </style>
