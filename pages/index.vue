@@ -1,15 +1,21 @@
 <template>
   <div class="container">
     <intro />
+    <about />
+    <projects />
   </div>
 </template>
 
 <script>
 import Intro from '~/components/sections/Intro.vue'
+import About from '~/components/sections/About.vue'
+import Projects from '~/components/sections/Projects.vue'
 
 export default {
   components: {
-    Intro
+    Intro,
+    About,
+    Projects
   }
 }
 </script>
@@ -17,7 +23,7 @@ export default {
 <style lang="scss">
 .container {
   margin: 0 auto;
-  min-width: 100%;
+  max-width: 1000px;
   min-height: 100%;
   padding: 0px 25px;
   display: block;
