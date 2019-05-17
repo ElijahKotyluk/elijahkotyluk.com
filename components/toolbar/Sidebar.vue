@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar-container" :class="{ 'show-sidebar': !showSidebar}">
+  <div class="sidebar-container" :class="{ 'show-sidebar': hideSidebar}">
     <div class="sidebar-title">
       <h1>Menu</h1>
     </div>
@@ -19,20 +19,30 @@
 export default {
   name: 'Sidebar',
   props: {
-    showSidebar: {
+    hideSidebar: {
       type: Boolean,
-      default: false
+      default: true
     },
     menu: {
       type: Array,
       default: () => []
     }
+  },
+  mounted() {
+    console.log('parent of sidebar:', this.$parent)
   }
 }
 </script>
 
 <style lang="scss">
 .sidebar-container {
+  top: 50px;
+  right: 20px;
+  position: absolute;
+}
+
+.show-sidebar {
+  display: none;
   top: 50px;
   right: 20px;
   position: absolute;

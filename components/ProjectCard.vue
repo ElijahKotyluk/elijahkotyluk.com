@@ -48,7 +48,7 @@ export default {
 
 <style lang="scss" scoped>
 .project-card-container {
-  width: 300px;
+  width: 275px;
   margin: 10px 10px;
   transition-delay: 0ms;
   visibility: visible;

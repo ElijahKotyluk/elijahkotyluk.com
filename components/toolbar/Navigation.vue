@@ -8,7 +8,7 @@
         </a>
       </li>
     </ol>
-    <sidebar :showSidebar="showSidebar" :menu="menu" />
+    <sidebar :hide-sidebar="hideSidebar" :menu="menu" />
   </nav>
 </template>
 
@@ -40,7 +40,7 @@ export default {
           to: '#contact'
         }
       ],
-      showSidebar: false,
+      hideSidebar: true,
       isActive: true
     }
   },
@@ -48,6 +48,7 @@ export default {
     toggleSidebar() {
       console.log('clicked')
       this.isActive = !this.isActive
+      this.hideSidebar = !this.hideSidebar
     }
   }
 }
