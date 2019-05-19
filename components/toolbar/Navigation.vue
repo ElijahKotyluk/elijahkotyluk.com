@@ -1,6 +1,6 @@
 <template>
   <nav class="nav-item-container">
-    <a id="hamburger" :class="{ 'active': !isActive }" href="#" @click="toggleSidebar()"><span></span></a>
+    <a id="hamburger" :class="{ 'active': isActive }" @click="toggleSidebar()"><span /></a>
     <ol class="nav-item-list">
       <li v-for="(item, i) in menu" :key="i" class="nav-items">
         <a :href="item.to">
@@ -34,31 +34,37 @@ export default {
         {
           title: 'Articles',
           to: '#articles'
-        },
-        {
-          title: 'Contact',
-          to: '#contact'
         }
       ],
       hideSidebar: true,
-      isActive: true
+      isActive: false
     }
   },
   methods: {
     toggleSidebar() {
-      console.log('clicked')
       this.isActive = !this.isActive
       this.hideSidebar = !this.hideSidebar
     }
+  },
+  mounted() {
+    // Listen for showToolbar value change:
+    this.$root.$on('showToolbar', (show) => {
+      if (!show) {
+        this.isActive = false
+        this.hideSidebar = true
+      }
+    })
   }
 }
 </script>
 
 <style lang="scss">
 .nav-item-container {
+  width: 100%;
   display: flex;
   -webkit-box-align: center;
   align-items: center;
+  justify-content: flex-end;
 
   ol {
     display: flex;
