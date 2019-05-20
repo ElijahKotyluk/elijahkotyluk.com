@@ -1,7 +1,7 @@
 <template>
   <section class="section-container">
     <div class="heading-container">
-      <h3 id="projects" class="projects-heading">
+      <h3 class="projects-heading">
         Things I've Built
       </h3>
     </div>

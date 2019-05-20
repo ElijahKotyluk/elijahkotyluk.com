@@ -1,25 +1,16 @@
 <template>
   <svg
-    id="svg4548"
+    id="site-logo"
     xmlns:svg="http://www.w3.org/2000/svg"
     xmlns="http://www.w3.org/2000/svg"
     width="57.65"
     height="57.53"
     viewBox="0 0 12 13"
   >
+    <title>
+      elijahkotyluk.com
+    </title>
     <!-- width="120" height="120" viewBox="0 0 25 13" -->
-    <defs id="defs4542">
-      <linearGradient
-        id="linearGradient6619"
-        osb:paint="solid"
-      >
-        <stop id="stop6617" style="stop-color:#000000;stop-opacity:1;" offset="0" />
-      </linearGradient>
-      <linearGradient id="linearGradient5115" osb:paint="solid">
-        <stop id="stop5113" style="stop-color:#000000;stop-opacity:1;" offset="0" />
-      </linearGradient>
-    </defs>
-
     <g id="layer1" transform="translate(-31.779735,-97.492171)">
       <path
         id="path4560"
@@ -44,3 +35,12 @@ export default {
   name: 'SiteLogo'
 }
 </script>
+
+<style lang="scss">
+#site-logo {
+  @media(min-width: 600px) {
+    width: 94.65px;
+    height: 82.53px;
+  }
+}
+</style>

@@ -1,9 +1,11 @@
 <template>
   <section class="section-container">
-    <div id="articles" class="heading-container">
-      <h3 class="articles-heading">
-        Articles
-      </h3>
+    <div class="articles-container">
+      <div id="articles" class="heading-container">
+        <h3 class="articles-heading">
+          Articles
+        </h3>
+      </div>
     </div>
   </section>
 </template>
@@ -15,16 +17,6 @@ export default {
 </script>
 
 <style lang="scss">
-.section-container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .articles-heading {
   position: relative;
   display: flex;
@@ -45,5 +37,5 @@ export default {
     top: 0px;
     margin-left: 20px;
   }
-  }
+}
 </style>

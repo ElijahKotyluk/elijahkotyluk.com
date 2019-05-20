@@ -9,7 +9,7 @@
         <a id="hamburger" :class="{ 'active': isActive }" @click="toggleSidebar()"><span /></a>
         <ol class="nav-item-list">
           <li v-for="(item, i) in menu" :key="i" class="nav-items">
-            <a :href="item.to">
+            <a :href="item.to" class="nav-link">
               {{ item.title }}
             </a>
           </li>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import SiteLogo from '../icons/SiteLogo.vue'
+import SiteLogo from './icons/SiteLogo.vue'
 
 export default {
   name: 'Toolbar',
@@ -76,7 +76,6 @@ export default {
     },
     toggleSidebar() {
       this.isActive = !this.isActive
-
       this.$root.$emit('toggleSidebar', this.isActive)
     }
   }
@@ -90,7 +89,6 @@ export default {
   display: flex;
   position: fixed;
   padding: 5px 10px 0px 10px;
-  margin-top: 5px;
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-box-align: center;
@@ -99,10 +97,11 @@ export default {
               0 4px 5px 0 rgba(0,0,0,.14),
               0 1px 10px 0 rgba(0,0,0,.12);
   z-index: 9999;
+  transition: all 1s;
 
   @media(max-width: 600px) {
-    height: 70px;
-    padding: 0px 10px;
+    height: 75px;
+    padding: 5px 10px 0px 10px;
   }
 }
 
@@ -142,12 +141,15 @@ export default {
 
   .nav-items {
     position: relative;
-    font-size: 13px;
-    counter-increment: item 1;
+    font-size: 16px;
     margin: 0px 10px;
 
     .nav-link {
       padding: 12px 10px;
+
+      &:hover {
+        color: rgba(53, 109, 128, 1);
+      }
     }
   }
 }

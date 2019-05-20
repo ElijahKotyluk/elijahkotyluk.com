@@ -2,7 +2,7 @@
   <section class="section-container">
     <div class="about-container">
       <div class="heading-container">
-        <h3 id="about" class="about-heading">
+        <h3 class="about-heading">
           About Me
         </h3>
       </div>

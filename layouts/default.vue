@@ -2,18 +2,21 @@
   <div class="app-container">
     <toolbar :menu="menu" />
     <sidebar :menu="menu" :hide-sidebar="hideSidebar" />
+    <social-icons />
     <nuxt />
   </div>
 </template>
 
 <script>
-import Toolbar from '~/components/toolbar/Toolbar.vue'
-import Sidebar from '~/components/toolbar/Sidebar.vue'
+import Toolbar from '~/components/Toolbar.vue'
+import Sidebar from '~/components/Sidebar.vue'
+import SocialIcons from '~/components/icons/SocialIcons.vue'
 
 export default {
   components: {
     Toolbar,
-    Sidebar
+    Sidebar,
+    SocialIcons
   },
   data() {
     return {
@@ -36,12 +39,8 @@ export default {
   },
   mounted() {
     this.$root.$on('toggleSidebar', (val) => {
-      console.log('emitted value from toolbar component:', val)
       this.hideSidebar = !this.hideSidebar
     })
   }
 }
 </script>
-
-<style lang="scss">
-</style>

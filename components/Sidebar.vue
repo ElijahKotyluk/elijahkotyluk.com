@@ -28,12 +28,12 @@ export default {
   },
   mounted() {
     this.$root.$on('toggleSidebar', (val) => {
-      console.log('emitted value from to toggesidebar:', val)
+      // Show || Hide sidebar depending on val:
       this.hideSidebar = !this.hideSidebar
     })
 
     this.$root.$on('showToolbar', (val) => {
-      console.log('emitted value to hide toolbar:', val)
+      // If toolbar is hidden then so should the sidebar:
       if (val === false) {
         this.hideSidebar = true
       }
@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss">
 .sidebar-container {
-  background-color: rgba(227, 233, 245, 0.04);
+  background-color: rgba(39, 39, 39, 1);
   display: flex;
   justify-content: center;
   max-width: 100%;
@@ -52,8 +52,8 @@ export default {
   overflow-x: hidden;
   pointer-events: auto;
   position: fixed;
-  right: -15px;
-  top: 65px;
+  right: 0;
+  top: 75px;
   width: 40vw;
   will-change: transform;
   z-index: 3;
@@ -67,10 +67,6 @@ export default {
     width: 100%;
     font-size: 13px;
     color: #2392b1;
-
-    &:hover {
-      color: #000000;
-    }
   }
 
   .menu-list {
@@ -80,7 +76,21 @@ export default {
     width: 100%;
 
     .menu-item {
-      padding: 10px;
+      width:100%;
+      text-align: center;
+
+      &:first-child {
+        border-bottom: 0.5px solid rgba(32, 32, 32, 1);
+      }
+
+      &:last-child {
+        border-top: 0.5px solid rgba(32, 32, 32, 1);
+      }
+
+      a {
+        margin: 10px;
+        padding: 5px;
+      }
     }
   }
 

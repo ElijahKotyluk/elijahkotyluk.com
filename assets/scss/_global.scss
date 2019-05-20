@@ -4,8 +4,9 @@ html, body, #__nuxt, #__layout, .app-container {
   margin: 0;
   height: 100%;
   width: 100%;
-  background-color: #1f2123;
-  color: #b7afaf;
+  scroll-behavior: smooth;
+  color: rgb(184, 175, 175);
+  background-color: rgb(30, 32, 34);
   -webkit-font-smoothing: antialiased;
   font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
  }
@@ -25,7 +26,6 @@ a {
   position: relative;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
 ul {

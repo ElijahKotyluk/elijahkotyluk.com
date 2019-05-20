@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <intro />
+    <span id="about" />
     <about />
+    <span id="projects" />
     <projects />
   </div>
 </template>
