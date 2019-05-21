@@ -1,11 +1,7 @@
 <template>
-  <div class="container">
-    <section class="section-container">
-      <div class="article-container">
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <div class="article-content" v-html="content.default" />
-      </div>
-    </section>
+  <div class="article-container">
+    <!-- eslint-disable-next-line vue/no-v-html -->
+    <div class="article-content" v-html="content.default" />
   </div>
 </template>
 
@@ -21,19 +17,10 @@ export default {
 </script>
 
 <style lang="scss">
-.container {
-  margin: 0 auto;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .article-container {
   margin: 0 auto;
   min-height: 100vh;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,12 +45,15 @@ export default {
     pre {
       background-color: rgba(0, 0, 0, 1);
       border-radius: 5px;
-      padding: 15px;
 
       code.language-javascript {
         span.hljs-keyword {
-          color: rgba(50, 10, 90, 1);
+          color: rgba(136, 93, 180, 1);
         }
+      }
+
+      @media (max-width:425px) {
+        font-size: 10px;
       }
     }
   }

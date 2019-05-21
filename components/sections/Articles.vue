@@ -1,7 +1,7 @@
 <template>
   <section class="section-container">
     <div class="articles-container">
-      <div id="articles" class="heading-container">
+      <div class="heading-container">
         <h3 class="articles-heading">
           Articles
         </h3>
