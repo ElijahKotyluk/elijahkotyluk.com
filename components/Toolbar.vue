@@ -1,9 +1,9 @@
 <template>
   <div class="toolbar" :class="{ 'toolbar--hidden': !showToolbar }">
     <div class="nav">
-      <nuxt-link to="/">
+      <a href="/">
         <site-logo />
-      </nuxt-link>
+      </a>
 
       <nav class="nav-item-container">
         <a id="hamburger" :class="{ 'active': isActive }" @click="toggleSidebar()">

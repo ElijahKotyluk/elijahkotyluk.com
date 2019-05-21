@@ -23,6 +23,10 @@ export default {
       hideSidebar: true,
       menu: [
         {
+          title: 'Home',
+          to: '/'
+        },
+        {
           title: 'About',
           to: '#about'
         },
@@ -31,13 +35,28 @@ export default {
           to: '#projects'
         },
         {
-          title: 'Articles',
-          to: '#articles'
+          title: 'Blog',
+          to: '/blog'
         }
       ]
     }
   },
   mounted() {
+    // Display different routes for blog pages
+    if (this.$route.name !== 'index') {
+      this.menu = [
+        {
+          title: 'Home',
+          to: '/'
+        },
+        {
+          title: 'Blog',
+          to: '/blog'
+        }
+      ]
+    }
+
+    // Listen to show/hide sidebar:
     this.$root.$on('toggleSidebar', (val) => {
       this.hideSidebar = !this.hideSidebar
     })
