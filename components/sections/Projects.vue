@@ -36,6 +36,12 @@ export default {
           technologies: ['Vue.js', 'Vuex', 'Moment.js', 'Flask', 'NDB', 'SCSS']
         },
         {
+          title: 'nuxt-keep',
+          description: 'Google keep clone with Nuxt',
+          externalLink: 'https://github.com/ElijahKotyluk/nuxt-keep',
+          technologies: ['Nuxt', 'Vuex', 'Vuetify']
+        },
+        {
           title: 'onyx',
           description: 'Basic Javascript unit testing library.',
           externalLink: 'https://github.com/ElijahKotyluk/onyx',
@@ -52,12 +58,6 @@ export default {
           description: 'Basic realtime chat application.',
           externalLink: 'https://github.com/ElijahKotyluk/vue-firebase-chat',
           technologies: ['Vue.js', 'Firebase', 'Materialize.css']
-        },
-        {
-          title: 'vue-calendar',
-          description: 'Static event calendar.',
-          externalLink: 'https://vue-moment-calendar.appspot.com/',
-          technologies: ['Vue.js', 'Vuex', 'Moment.js', 'SCSS']
         },
         {
           title: 'vue-gcloud-scaffold',

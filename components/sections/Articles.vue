@@ -6,13 +6,38 @@
           Articles
         </h3>
       </div>
+      <div class="articles-content">
+        <article-card
+          v-for="(article, i) in articles"
+          :key="i"
+          :img="article.img"
+          :title="article.title"
+          :to="article.to"
+        />
+      </div>
     </div>
   </section>
 </template>
 
 <script>
+import ArticleCard from '../ArticleCard.vue'
+
 export default {
-  name: 'Articles'
+  name: 'Articles',
+  components: {
+    ArticleCard
+  },
+  data() {
+    return {
+      articles: [
+        {
+          title: 'Blog',
+          img: require('~/static/images/nuxtMDpost.png'),
+          to: '/articles/nuxt_md_blog'
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -37,5 +62,11 @@ export default {
     top: 0px;
     margin-left: 20px;
   }
+}
+
+.articles-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 </style>

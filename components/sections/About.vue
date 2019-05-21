@@ -11,6 +11,7 @@
           <p>
             Hello! I'm Elijah, a software engineer based in California with a serious passion for problem solving and programming. I started teaching myself to code about 2 years ago and found myself falling in love with the process, thought, and planning that went into writing even the smallest programs. Since then I haven't looked back and I strive to grow and improve.
           </p>
+          <p>
             I develop performant applications that provide intuitive, dynamic user interfaces coupled with efficient and modern backend architecture. When I'm not building a prototype application for a client, I'm looking for an open source issue to work on, constructing something of my own, or writing up an article.
           </p>
           <p>

@@ -70,7 +70,6 @@ export default {
 .project-card-container {
   width: 275px;
   margin: 10px 10px;
-  transition-delay: 0ms;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .4),
               0 4px 5px 0 rgba(0, 0, 0, .25),
               0 1px 10px 0 rgba(0, 0, 0, .23);
