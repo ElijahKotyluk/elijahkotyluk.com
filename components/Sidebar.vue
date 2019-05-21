@@ -3,7 +3,7 @@
     <div class="sidebar-items">
       <ul class="menu-list">
         <li v-for="(item, i) in menu" :key="i" class="menu-item">
-          <a href="to">
+          <a :href="item.to">
             {{ item.title }}
           </a>
         </li>

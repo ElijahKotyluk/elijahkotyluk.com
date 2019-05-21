@@ -94,7 +94,7 @@ export default {
     justify-content: space-between;
     -webkit-box-align: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     width: 100%;
 
     svg {

@@ -11,6 +11,7 @@
         :key="i"
         :title="project.title"
         :description="project.description"
+        :external-link="project.externalLink"
         :technologies="project.technologies"
       />
     </div>
@@ -31,31 +32,37 @@ export default {
         {
           title: 'vue-flask-calendar',
           description: 'Basic event calendar created with Vue, Moment, Flask, NDB',
+          externalLink: 'https://github.com/ElijahKotyluk/vue-flask-calendar',
           technologies: ['Vue.js', 'Vuex', 'Moment.js', 'Flask', 'NDB', 'SCSS']
         },
         {
           title: 'onyx',
           description: 'Basic Javascript unit testing library.',
+          externalLink: 'https://github.com/ElijahKotyluk/onyx',
           technologies: ['Javascript']
         },
         {
           title: 'vue-weather-app',
           description: 'Weather application that requests the user\'s geolocation and displays the local weather.',
+          externalLink: 'https://github.com/ElijahKotyluk/vue-weather-app',
           technologies: ['Vue.js', 'Vuex', 'Firebase', 'Materialize.css']
         },
         {
           title: 'vue-firebase-chat',
           description: 'Basic realtime chat application.',
+          externalLink: 'https://github.com/ElijahKotyluk/vue-firebase-chat',
           technologies: ['Vue.js', 'Firebase', 'Materialize.css']
         },
         {
           title: 'vue-calendar',
           description: 'Static event calendar.',
+          externalLink: 'https://vue-moment-calendar.appspot.com/',
           technologies: ['Vue.js', 'Vuex', 'Moment.js', 'SCSS']
         },
         {
           title: 'vue-gcloud-scaffold',
           description: 'Vue.js scaffold with webpack, vuex, vue-router for easy static deployment to Google App Engine.',
+          externalLink: 'https://github.com/ElijahKotyluk/vue-gcloud-scaffold',
           technologies: ['Vue', 'Webpack']
         }
       ]

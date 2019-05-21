@@ -3,6 +3,8 @@
     <intro />
     <span id="about" />
     <about />
+    <span id="articles" />
+    <articles />
     <span id="projects" />
     <projects />
   </div>
@@ -11,12 +13,14 @@
 <script>
 import Intro from '~/components/sections/Intro.vue'
 import About from '~/components/sections/About.vue'
+import Articles from '~/components/sections/Articles.vue'
 import Projects from '~/components/sections/Projects.vue'
 
 export default {
   components: {
     Intro,
     About,
+    Articles,
     Projects
   }
 }

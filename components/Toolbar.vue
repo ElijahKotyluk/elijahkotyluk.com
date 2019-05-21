@@ -6,7 +6,9 @@
       </nuxt-link>
 
       <nav class="nav-item-container">
-        <a id="hamburger" :class="{ 'active': isActive }" @click="toggleSidebar()"><span /></a>
+        <a id="hamburger" :class="{ 'active': isActive }" @click="toggleSidebar()">
+          <span />
+        </a>
         <ol class="nav-item-list">
           <li v-for="(item, i) in menu" :key="i" class="nav-items">
             <a :href="item.to" class="nav-link">

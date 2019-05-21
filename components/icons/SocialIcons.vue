@@ -8,6 +8,7 @@
             target="_blank"
             aria-label="Github"
             class="social-icon-link"
+            rel="noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -27,6 +28,7 @@
             target="_blank"
             aria-label="Codepen"
             class="social-icon-link"
+            rel="noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -46,6 +48,7 @@
             target="_blank"
             aria-label="LinkedIn"
             class="social-icon-link"
+            rel="noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +68,7 @@
             target="_blank"
             aria-label="Twitter"
             class="social-icon-link"
+            rel="noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
