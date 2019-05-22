@@ -23,20 +23,16 @@ export default {
       hideSidebar: true,
       menu: [
         {
-          title: 'Home',
-          to: '/'
-        },
-        {
           title: 'About',
           to: '#about'
         },
         {
-          title: 'Projects',
-          to: '#projects'
+          title: 'Articles',
+          to: '#articles'
         },
         {
-          title: 'Blog',
-          to: '/blog'
+          title: 'Projects',
+          to: '#projects'
         }
       ]
     }
@@ -48,10 +44,6 @@ export default {
         {
           title: 'Home',
           to: '/'
-        },
-        {
-          title: 'Blog',
-          to: '/blog'
         }
       ]
     }
