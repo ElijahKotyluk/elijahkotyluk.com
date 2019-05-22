@@ -7,33 +7,41 @@
         </h3>
       </div>
       <div class="articles-content">
-        <article-card
-          v-for="(article, i) in articles"
-          :key="i"
-          :img="article.img"
-          :title="article.title"
-          :to="article.to"
-        />
+        Currently I am working on writing some articles, please be patient as I refine the writing and get these articles together. :)
+        <ol>
+          <li
+            v-for="(article, i) in articles"
+            :key="i"
+            class="article-link-list-item"
+          >
+            <nuxt-link :to="article.to" class="article-link">
+              {{ article.title }}
+            </nuxt-link>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import ArticleCard from '../ArticleCard.vue'
-
 export default {
   name: 'Articles',
-  components: {
-    ArticleCard
-  },
   data() {
     return {
       articles: [
         {
-          title: 'Blog',
+          title: 'Create a blog with nuxt + markdown',
           img: require('~/static/images/nuxtMDpost.png'),
           to: '/articles/nuxt_md_blog'
+        },
+        {
+          title: 'What is Nuxt?',
+          to: '/articles/what_is_nuxt'
+        },
+        {
+          title: 'What is Vuex?',
+          to: '/articles/what_is_nuxt'
         }
       ]
     }
@@ -66,7 +74,28 @@ export default {
 
 .articles-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  font-size: 16px;
   justify-content: center;
+
+  ol {
+    color:  rgb(99, 190, 255);
+    margin: 15px 0;
+  }
+
+  .article-link-list-item {
+    margin: 5px;
+    padding: 5px;
+
+    .article-link {
+      color: rgb(173, 187, 226);
+      font-size: 14px;
+      text-decoration: underline;
+
+      &:hover {
+        color: rgb(101, 109, 131);
+      }
+    }
+  }
 }
 </style>
