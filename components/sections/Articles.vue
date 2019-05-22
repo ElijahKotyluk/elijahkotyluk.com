@@ -79,7 +79,7 @@ export default {
   justify-content: center;
 
   ol {
-    color:  rgb(99, 190, 255);
+    color:  rgb(37, 137, 166);
     margin: 15px 0;
   }
 
