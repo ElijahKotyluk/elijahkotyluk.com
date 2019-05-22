@@ -37,17 +37,20 @@ export default {
       ]
     }
   },
-  mounted() {
-    // Display different routes for blog pages
-    if (this.$route.name !== 'index') {
-      this.menu = [
-        {
-          title: 'Home',
-          to: '/'
-        }
-      ]
+  watch: {
+    // If the route is not index then replace this.menu's data:
+    $route() {
+      if (this.$route !== 'index') {
+        this.menu = [
+          {
+            title: 'Home',
+            to: '/'
+          }
+        ]
+      }
     }
-
+  },
+  mounted() {
     // Listen to show/hide sidebar:
     this.$root.$on('toggleSidebar', (val) => {
       this.hideSidebar = !this.hideSidebar
