@@ -1,4 +1,53 @@
-@import "flex";
-@import "global";
-@import "media";
-@import "vars";
+html, body, #__nuxt, #__layout, .app-container {
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  color: rgb(184, 175, 175);
+  background-color: rgb(30, 32, 34);
+  -webkit-font-smoothing: antialiased;
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+ }
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+p {
+  margin: 0px 0px 15px;
+}
+
+.section-container {
+  margin: 0px auto;
+  min-height: 100vh;
+  max-width: 1000px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(30, 32, 34);
+  /* align-items: flex-start; */
+}

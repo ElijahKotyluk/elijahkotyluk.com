@@ -6,14 +6,14 @@ const fs = require('fs')
 const routesArray = []
 
  // Create variable to contain array of markdown files read in our articles directory:
-const files = fs.readdirSync('./static/articles')
+const files = fs.readdirSync('./static/article')
 
  // Create a route for each file and push that route to routesArray:
 const createRoutesArray = () => {
   files.forEach((file) => {
 
     let name = file.substr(0, file.lastIndexOf('.'))
-    let route = '/articles/' + name
+    let route = '/article/' + name
 
      routesArray.push(route)
   })
@@ -21,7 +21,7 @@ const createRoutesArray = () => {
 
  const getSlugs = (article, index) => {
   let slug = article.substr(0, article.lastIndexOf('.'))
-  return `/articles/${slug}`
+  return `/article/${slug}`
 }
 
 

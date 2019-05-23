@@ -8,7 +8,7 @@
 <script>
 export default {
   async asyncData({ params }) {
-    const fileContent = await import(`~/static/articles/${params.slug}.md`)
+    const fileContent = await import(`~/static/article/${params.slug}.md`)
     return {
       content: fileContent
     }
@@ -18,12 +18,13 @@ export default {
 
 <style lang="scss">
 .article-container {
-  margin: 0 auto;
-  min-height: 100vh;
-  max-width: 100vw;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
+  width: 100vw;
+  min-height: 100vh;
 }
 
 .article-content {
@@ -36,6 +37,38 @@ export default {
     display: flex;
     flex-direction: column;
     padding: 12px;
+
+    img[src*="#nuxtcli"] {
+      height: 125px;
+      width: 330px;
+    }
+
+    img[src*="#rootdir"] {
+      border: 2px solid rgb(51, 107, 125);
+      height: 190px;
+      margin: 10px 0px -15px 37px;
+      width: 260px;
+    }
+
+    img[src*="#slug"] {
+      border: 2px solid #336b7d;
+      height: 250px;
+      width: 335px;
+    }
+  }
+
+  a {
+    color: rgba(83, 175, 207, 1);
+    text-decoration: underline;
+
+    &:hover {
+      color: rgb(52, 109, 128);
+    }
+  }
+
+  code {
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(113, 107, 107, 1);
   }
 
   h1 {

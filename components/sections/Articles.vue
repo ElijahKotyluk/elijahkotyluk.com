@@ -33,15 +33,15 @@ export default {
         {
           title: 'Create a blog with nuxt + markdown',
           img: require('~/static/images/nuxtMDpost.png'),
-          to: '/articles/nuxt_md_blog'
+          to: '/article/nuxt_md_blog'
         },
         {
           title: 'What is Nuxt?',
-          to: '/articles/what_is_nuxt'
+          to: '/article/what_is_nuxt'
         },
         {
           title: 'What is Vuex?',
-          to: '/articles/what_is_nuxt'
+          to: '/article/what_is_nuxt'
         }
       ]
     }
