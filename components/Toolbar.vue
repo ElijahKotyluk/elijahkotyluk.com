@@ -94,7 +94,7 @@ export default {
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-box-align: center;
-  background-color: #1f2022;
+  background-color: rgb(26, 24, 24);
   box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),
               0 4px 5px 0 rgba(0,0,0,.14),
               0 1px 10px 0 rgba(0,0,0,.12);
@@ -170,7 +170,7 @@ export default {
   border-radius: 1px;
   height: 1.5px;
   width: 35px;
-  background: rgba(25, 209, 255, .7);
+  background: rgba(25, 209, 255, 1);
   position: absolute;
   display: inline-block;
   content: '';

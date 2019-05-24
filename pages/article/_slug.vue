@@ -28,6 +28,7 @@ export default {
 }
 
 .article-content {
+  color: #d2d2d2;
   max-width: 850px;
   text-align: left;
   margin-top: 70px;
@@ -37,6 +38,26 @@ export default {
     display: flex;
     flex-direction: column;
     padding: 12px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      list-style-type: circle;
+      margin-bottom: 15px;
+      padding-left: 30px;
+
+      li {
+        margin: 5px 0;
+        padding: 5px 0;
+
+      }
+    }
+
+    @media(min-width: 600px) {
+      margin-top: 50px;
+    }
   }
 
   a {
@@ -65,6 +86,7 @@ export default {
     margin: 5px 0;
     font-size: 20px;
     letter-spacing: 1px;
+    text-decoration: underline;
   }
 
   p {
@@ -75,8 +97,7 @@ export default {
   pre {
     background-color: rgba(0, 0, 0, 1);
     border-radius: 5px;
-    font-size: 10px;
-    max-width: 340px;
+    font-size: 12px;
     margin: 25px 0;
     padding: 25px 0;
     overflow: scroll;
@@ -86,11 +107,15 @@ export default {
       padding: 0;
 
       span.hljs-comment {
-        color: #a5a5a5;
+        color: #7b7a79;
       }
 
       span.hljs-keyword {
         color: #5db4ad;
+      }
+
+      span.hljs-literal {
+        color: #1da8ed;
       }
 
       span.hljs-string {
@@ -98,7 +123,7 @@ export default {
       }
 
       span.hljs-subst {
-        color: inherit;
+        color: #ebe20b;
       }
 
       span.hljs-built_in {
@@ -110,7 +135,7 @@ export default {
       }
 
       span.hljs-params {
-        color: #7b7a79;
+        color: #86cc1f;
       }
 
       span.hljs-number {
@@ -120,6 +145,7 @@ export default {
 
     @media (max-width:425px) {
       font-size: 10px;
+      max-width: 340px;
     }
   }
 }
