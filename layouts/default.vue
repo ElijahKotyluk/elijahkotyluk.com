@@ -51,6 +51,14 @@ export default {
     }
   },
   mounted() {
+    if (this.$route.name !== 'index') {
+      this.menu = [
+        {
+          title: 'Home',
+          to: '/'
+        }
+      ]
+    }
     // Listen to show/hide sidebar:
     this.$root.$on('toggleSidebar', (val) => {
       this.hideSidebar = !this.hideSidebar
