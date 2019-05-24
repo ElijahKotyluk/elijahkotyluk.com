@@ -48,6 +48,12 @@ export default {
     }
   }
 
+  code {
+    background-color: rgba(0, 0, 0, 1);
+    color: #346d80;
+    padding: 1px 5px;
+  }
+
   h1 {
     text-align: center;
     margin: 20px auto;
@@ -74,6 +80,47 @@ export default {
     margin: 25px 0;
     padding: 25px 0;
     overflow: scroll;
+
+    code.language-javascript {
+      color: #ece5e5;
+      padding: 0;
+
+      span.hljs-comment {
+        color: #a5a5a5;
+      }
+
+      span.hljs-keyword {
+        color: #5db4ad;
+      }
+
+      span.hljs-string {
+        color: #e0a737;
+      }
+
+      span.hljs-subst {
+        color: inherit;
+      }
+
+      span.hljs-built_in {
+        color: #f36868;
+      }
+
+      span.hljs-function {
+        color: #ca6920;
+      }
+
+      span.hljs-params {
+        color: #7b7a79;
+      }
+
+      span.hljs-number {
+        color: #ff5cc3;
+      }
+    }
+
+    @media (max-width:425px) {
+      font-size: 10px;
+    }
   }
 }
 </style>
