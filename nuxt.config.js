@@ -6,7 +6,7 @@ const fs = require('fs')
 const routesArray = []
 
  // Create variable to contain array of markdown files read in our articles directory:
-const files = fs.readdirSync('./static/article')
+const files = fs.readdirSync('./static/articles')
 
  // Create a route for each file and push that route to routesArray:
 const createRoutesArray = () => {

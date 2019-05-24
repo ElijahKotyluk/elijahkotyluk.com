@@ -8,9 +8,9 @@
 <script>
 export default {
   async asyncData({ params }) {
-    const fileContent = await import(`~/static/article/${params.slug}.md`)
+    const article = await import(`~/static/articles/${params.slug}.md`)
     return {
-      content: fileContent
+      content: article
     }
   }
 }
@@ -37,24 +37,6 @@ export default {
     display: flex;
     flex-direction: column;
     padding: 12px;
-
-    img[src*="#nuxtcli"] {
-      height: 125px;
-      width: 330px;
-    }
-
-    img[src*="#rootdir"] {
-      border: 2px solid rgb(51, 107, 125);
-      height: 190px;
-      margin: 10px 0px -15px 37px;
-      width: 260px;
-    }
-
-    img[src*="#slug"] {
-      border: 2px solid #336b7d;
-      height: 250px;
-      width: 335px;
-    }
   }
 
   a {
@@ -78,8 +60,8 @@ export default {
     letter-spacing: 1px;
   }
 
-  h3 {
-    margin: 15px 0;
+  h3, h4, h5 {
+    margin: 5px 0;
     font-size: 20px;
     letter-spacing: 1px;
   }
@@ -93,8 +75,10 @@ export default {
     background-color: rgba(0, 0, 0, 1);
     border-radius: 5px;
     font-size: 10px;
+    max-width: 340px;
     margin: 25px 0;
     padding: 25px 0;
+    overflow: scroll;
 
     code.language-javascript {
       span.hljs-keyword {
