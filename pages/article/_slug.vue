@@ -57,6 +57,7 @@ export default {
 
     @media(min-width: 600px) {
       margin-top: 50px;
+      margin-bottom: 30px;
     }
   }
 

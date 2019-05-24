@@ -1,9 +1,9 @@
 # Create a static blog with Nuxt + Markdown
 
 ### Introduction:
-If you're someone who has wants a static blog without having to setup and use a CMS(Content Management Service) or external service to get your content, then you were in the same boat that I was in until I did some reading. In this article I'm going to summarize and break down the steps I took to create this site and how I configured Nuxt to generate a static site that serves dynamic markdown content.
+If you're someone who has wanted a static blog without having to setup and use a CMS(Content Management Service) or external service to get your content, then you were in the same boat that I was in until I found this process. In this article I'm going to summarize and break down the steps I took to create this site and how I configured Nuxt to generate a static site that serves dynamic markdown content.
 
-#### Getting started:
+### Getting started:
 So first things first, we need to initialize our Nuxt project. You can run either of the following:
 
   + yarn:
@@ -27,6 +27,8 @@ Next we want to install:<br>
   + yarn: `yarn add @nuxtjs/markdownit`
   + npx: `npm i @nuxtjs/markdownit`
 
+
+### Configuration:
 Once you have that installed, go into your `nuxt.config.js` file and add the newly installed package to your modules property array like so:
 
 ```javascript
@@ -41,8 +43,6 @@ Once you have that installed, go into your `nuxt.config.js` file and add the new
   ],
   ...
 ```
-
-#### Directories & Files:
 After you've done this, the next thing you want to do is get your directories set up to look something like this:
 
 <img style="border: 2px solid #336b7d;
@@ -149,11 +149,17 @@ Once all this is done, go to your terminal and run either of the following below
 + yarn: `yarn dev`
 + npx: `npm run dev`
 
-`localhost:3000/article/<markdown_file>`<br>
+visit: `localhost:3000/article/<markdown_file>`
+
 To spin up your static deployment bundle run:
 + yarn: `yarn generate && yarn start`
 + npx: `npm run generate && npm run start`
 
+### Conclusion
+That's it, you should now have a static blog site up and running, the only thing left for you to do is style your page and optionally highlight your markdown syntax.
+
 For markdown hightlighting I've seen people use: [highlight.js](https://www.npmjs.com/package/highlightjs)
 <br>
 For this site(elijahkotyluk.com/article/nuxt_md_blog) I used my own SCSS to maintain more freedom and control.
+
+Feedback or Criticism?: elijah@elijahkotyluk.com
