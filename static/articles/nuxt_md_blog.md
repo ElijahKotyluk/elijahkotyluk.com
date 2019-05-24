@@ -32,7 +32,7 @@ Next we want to install:<br>
 Once you have that installed, go into your `nuxt.config.js` file and add the newly installed package to your modules property array like so:
 
 <p style="margin-bottom: 5px; text-align: center;">
-  <code style="font-size: 18px;">nuxt.config.js</code>
+  <code style="font-size: 16px;">nuxt.config.js</code>
 </p>
 
 ```javascript
@@ -59,7 +59,7 @@ After you've done this, the next thing you want to do is get your directories se
 + `pages/article/_slug.vue`  - Component to dynamically render markdown content associated with it's own route.
 
 <p style="margin-bottom: 5px; text-align: center;">
-  <code style="font-size: 18px;">\_slug.vue</code>
+  <code style="font-size: 16px;">\_slug.vue</code>
 </p>
 
 ```javascript
@@ -94,7 +94,7 @@ Inside `asyncData` we are going to use `await` to import the files from our `sta
 After that, go back to your config file and add this:
 
 <p style="margin-bottom: 5px; text-align: center;">
-  <code style="font-size: 18px;">nuxt.config.js</code>
+  <code style="font-size: 16px;">nuxt.config.js</code>
 </p>
 
 ```javascript
@@ -132,7 +132,7 @@ After that, go back to your config file and add this:
 There is a little bit going on here, so let's summarize it. We are reading the markdown files in the articles directory and then creating an array contained with each file. `getSlugs` is a function that just returns a url slug, which we will end up calling below in our `routes` function:
 
 <p style="margin-bottom: 5px; text-align: center;">
-  <code style="font-size: 18px;">nuxt.config.js</code>
+  <code style="font-size: 16px;">nuxt.config.js</code>
 </p>
 
 ```javascript
