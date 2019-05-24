@@ -29,6 +29,7 @@ export default {
 
 .article-content {
   color: #d2d2d2;
+  line-height: 1.4;
   max-width: 850px;
   text-align: left;
   margin-top: 70px;
@@ -84,14 +85,15 @@ export default {
   }
 
   h3, h4, h5 {
-    margin: 5px 0;
-    font-size: 20px;
+    margin: 15px 0;
+    font-size: 22px;
     letter-spacing: 1px;
     text-decoration: underline;
   }
 
   p {
     font-size: 14px;
+    margin-bottom: 20px;
     text-align: left;
   }
 
@@ -99,7 +101,7 @@ export default {
     background-color: rgba(0, 0, 0, 1);
     border-radius: 5px;
     font-size: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     padding: 10px 0;
     overflow: scroll;
 

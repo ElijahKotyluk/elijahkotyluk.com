@@ -165,7 +165,7 @@ To spin up your static deployment bundle run:
 + yarn: `yarn generate && yarn start`
 + npx: `npm run generate && npm run start`
 
-### Conclusion
+### Conclusion:
 That's it, you should now have a static blog site up and running, the only thing left for you to do is style your page and optionally highlight your markdown syntax.
 
 For markdown hightlighting I've seen people use: [highlight.js](https://www.npmjs.com/package/highlightjs)
