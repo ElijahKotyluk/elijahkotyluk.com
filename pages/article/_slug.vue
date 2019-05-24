@@ -99,8 +99,8 @@ export default {
     background-color: rgba(0, 0, 0, 1);
     border-radius: 5px;
     font-size: 12px;
-    margin: 25px 0;
-    padding: 25px 0;
+    margin-bottom: 10px;
+    padding: 10px 0;
     overflow: scroll;
 
     code.language-javascript {

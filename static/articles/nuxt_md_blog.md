@@ -31,8 +31,11 @@ Next we want to install:<br>
 ### Configuration:
 Once you have that installed, go into your `nuxt.config.js` file and add the newly installed package to your modules property array like so:
 
+<p style="margin-bottom: 5px; text-align: center;">
+  <code style="font-size: 18px;">nuxt.config.js</code>
+</p>
+
 ```javascript
-                  /* nuxt.config.js */
   ...
   /*
   ** Nuxt.js modules
@@ -55,8 +58,11 @@ After you've done this, the next thing you want to do is get your directories se
 + `static/articles/...`  - Where we will store our markdown files.
 + `pages/article/_slug.vue`  - Component to dynamically render markdown content associated with it's own route.
 
+<p style="margin-bottom: 5px; text-align: center;">
+  <code style="font-size: 18px;">\_slug.vue</code>
+</p>
+
 ```javascript
-                 /*  _slug.vue  */
   <template>
    <div class="article-container">
      <!-- eslint-disable-next-line vue/no-v-html -->
@@ -87,9 +93,11 @@ Inside `asyncData` we are going to use `await` to import the files from our `sta
 
 After that, go back to your config file and add this:
 
-```javascript
-                  /* nuxt.config.js */
+<p style="margin-bottom: 5px; text-align: center;">
+  <code style="font-size: 18px;">nuxt.config.js</code>
+</p>
 
+```javascript
   // Require Node's file system module:
   const fs = require('fs');
 
@@ -123,9 +131,11 @@ After that, go back to your config file and add this:
 
 There is a little bit going on here, so let's summarize it. We are reading the markdown files in the articles directory and then creating an array contained with each file. `getSlugs` is a function that just returns a url slug, which we will end up calling below in our `routes` function:
 
-```javascript
-                  /* nuxt.config.js */
+<p style="margin-bottom: 5px; text-align: center;">
+  <code style="font-size: 18px;">nuxt.config.js</code>
+</p>
 
+```javascript
   /*
   ** Generate static routes:
   */
@@ -160,6 +170,6 @@ That's it, you should now have a static blog site up and running, the only thing
 
 For markdown hightlighting I've seen people use: [highlight.js](https://www.npmjs.com/package/highlightjs)
 <br>
-For this site(elijahkotyluk.com/article/nuxt_md_blog) I used my own SCSS to maintain more freedom and control.
+For this site(elijahkotyluk.com/article/nuxt_md_blog), I used SCSS :)
 
 Feedback or Criticism?: elijah@elijahkotyluk.com
