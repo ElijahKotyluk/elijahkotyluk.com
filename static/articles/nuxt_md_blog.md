@@ -1,7 +1,7 @@
 # Create a static blog with Nuxt + Markdown
 
 ### Introduction:
-If you're someone who has wanted a static blog without having to setup and use a CMS(Content Management Service) or external service to get your content, then you were in the same boat that I was in until I found this process. In this article I'm going to summarize and break down the steps I took to create this site and how I configured Nuxt to generate a static site that serves dynamic markdown content.
+If you're someone who has wanted a static blog without having to setup and use a CMS(Content Management System) or external service to get your content, then you were in the same boat that I was in until I found this process. In this article I'm going to summarize and break down the steps I took to create this site and how I configured Nuxt to generate a static site that serves dynamic markdown content.
 
 ### Getting started:
 So first things first, we need to initialize our Nuxt project. You can run either of the following:
