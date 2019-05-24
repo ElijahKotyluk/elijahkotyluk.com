@@ -48,11 +48,6 @@ export default {
     }
   }
 
-  code {
-    background-color: rgba(0, 0, 0, 1);
-    color: rgba(113, 107, 107, 1);
-  }
-
   h1 {
     text-align: center;
     margin: 20px auto;
@@ -79,16 +74,6 @@ export default {
     margin: 25px 0;
     padding: 25px 0;
     overflow: scroll;
-
-    code.language-javascript {
-      span.hljs-keyword {
-        color: rgba(136, 93, 180, 1);
-      }
-    }
-
-    @media (max-width:425px) {
-      font-size: 10px;
-    }
   }
 }
 </style>

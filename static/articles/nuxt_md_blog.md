@@ -1,7 +1,7 @@
 # Create a static blog with Nuxt + Markdown
 
 ### Introduction:
-My inspiration for making this site came from my desire to build a portfolio where I could also have a highly performant blog without needing to rely on any services outside of my own application to provide that content. So in this article, I am going to attempt to show you how I was able to use Nuxt to generate a static site that serves dynamic markdown content.
+My inspiration for making this site came from my desire to build a portfolio where I could also have a highly performant blog without needing to rely on any services outside of my own application to provide that content. So in this article, I am going to show you how I was able to use Nuxt to generate a static site that serves dynamic markdown content.
 
 #### Getting started:
 So first things first, we need to initialize our Nuxt project. You can run either of the following:
@@ -13,7 +13,7 @@ So first things first, we need to initialize our Nuxt project. You can run eithe
 
 Running either of those will take you through the Nuxt scaffolding CLI and will give you options to choose how you want your Nuxt application setup. This is the setup I'll be using:
 
-<img style="height: 125px; margin-bottom: 15px; width: 330px;" src="https://i.imgur.com/gDUxFsa.png">
+<img style="height: auto; margin-bottom: 15px; width: 100%;" src="https://i.imgur.com/gDUxFsa.png">
 
 Next we want to install:<br>
 [@nuxtjs/markdownit](https://www.npmjs.com/package/@nuxtjs/markdownit) - A markdown parser which will convert your markdown into html, and allow for use in your Vue components.
@@ -42,11 +42,11 @@ Once you have that installed, go into your `nuxt.config.js` file and add the new
 After you've done this, the next thing you want to do is get your directories set up to look something like this:
 
 <img style="border: 2px solid #336b7d;
-     height: 200px;
-     margin: 5px 0px 0px 50px;
-     padding-bottom: 5px;
-     width: 250px;"
-     src="https://i.imgur.com/hBcaRHi.png">
+     height: 100%;
+     width: 100%;
+     max-height: 400px;
+     max-width: 300px;"
+     src="https://i.imgur.com/7YXKGfT.png">
 
 `static/articles/...`  - Where we will store our markdown files.<br>
 `pages/article/_slug.vue`  - Component to dynamically render markdown content associated with it's own route.

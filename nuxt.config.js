@@ -52,7 +52,8 @@ export default {
   ** Global CSS
   */
   css: [
-    '~/assets/scss/main.scss'
+    '~/assets/scss/main.scss',
+    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' }
   ],
 
   /*
@@ -68,6 +69,13 @@ export default {
     '@nuxtjs/pwa',
     ['@nuxtjs/markdownit', { linkify: true }]
   ],
+
+  markdownit: {
+    injected: true,
+    use: [
+      'markdown-it-highlightjs'
+    ]
+  },
 
   /*
   ** Generate static routes:
