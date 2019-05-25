@@ -31,8 +31,7 @@ export default {
     return {
       articles: [
         {
-          title: 'Create a blog with nuxt + markdown',
-          img: require('~/static/images/nuxtMDpost.png'),
+          title: 'Create a static blog with nuxt + markdown',
           to: '/article/nuxt_md_blog'
         },
         {

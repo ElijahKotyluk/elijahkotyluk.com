@@ -1,5 +1,10 @@
 # Create a static blog with Nuxt + Markdown
 
+<img alt="create a static blog with markdown and nuxt"
+     title="nuxt markdown blog"
+     style="height: auto; width: 100%;"
+     src="https://i.imgur.com/QbpY7xM.png">
+
 ### Introduction:
 If you're someone who has wanted a static blog without having to setup and use a CMS(Content Management System) or external service to get your content, then you were in the same boat that I was in until I found this process. In this article I'm going to summarize and break down the steps I took to create this site and how I configured Nuxt to generate a static site that serves dynamic markdown content.
 
@@ -15,7 +20,9 @@ So first things first, we need to initialize our Nuxt project. You can run eithe
 
 Running either of those will take you through the Nuxt scaffolding CLI and will give you options to choose how you want your Nuxt application setup. This is the setup I'll be using:
 
-<img style="height: auto;
+<img alt="creating a markdown blog with nuxt"
+     title="nuxt blog setup"
+     style="height: auto;
      margin-bottom: 15px;
      width: 100%;
      max-width: 500px;"
@@ -48,7 +55,9 @@ Once you have that installed, go into your `nuxt.config.js` file and add the new
 ```
 After you've done this, the next thing you want to do is get your directories set up to look something like this:
 
-<img style="border: 2px solid #336b7d;
+<img alt="nuxt static blog directory setup"
+     title="nuxt blog directory"
+     style="border: 2px solid #336b7d;
      height: 100%;
      width: 100%;
      max-height: 400px;
@@ -59,7 +68,7 @@ After you've done this, the next thing you want to do is get your directories se
 + `pages/article/_slug.vue`  - Component to dynamically render markdown content associated with it's own route.
 
 <p style="margin-bottom: 5px; text-align: center;">
-  <code style="font-size: 16px;">\_slug.vue</code>
+  <code style="font-size: 16px;">_slug.vue</code>
 </p>
 
 ```javascript
