@@ -1,7 +1,7 @@
 {
   "name": "elijahkotyluk",
   "version": "1.0.0",
-  "description": "Personal website/portfolio",
+  "description": "Static portfolio and blog created with Nuxt.js and Markdown",
   "author": "Elijah Kotyluk",
   "private": true,
   "scripts": {

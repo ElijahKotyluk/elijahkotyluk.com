@@ -82,6 +82,10 @@ export default {
     margin: 20px auto;
     font-size: 26px;
     letter-spacing: 1px;
+
+    @media(min-width: 600px) {
+      font-size: 40px;
+    }
   }
 
   h3, h4, h5 {

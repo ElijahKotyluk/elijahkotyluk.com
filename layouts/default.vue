@@ -40,7 +40,7 @@ export default {
   watch: {
     // If the route is not index then replace this.menu's data:
     $route() {
-      if (this.$route !== 'index') {
+      if (this.$route.name === 'article-slug') {
         this.menu = [
           {
             title: 'Home',

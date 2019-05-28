@@ -1,14 +1,14 @@
-# Create a static blog with Nuxt + Markdown
+# Create a static blog with Markdown + Nuxt
 
 <img alt="create a static blog with markdown and nuxt"
      title="nuxt markdown blog"
      style="height: auto; width: 100%;"
      src="https://i.imgur.com/QbpY7xM.png">
 
-### Introduction:
+## Introduction:
 If you're someone who has wanted a static blog without having to setup and use a CMS(Content Management System) or external service to get your content, then you were in the same boat that I was in until I found this process. In this article I'm going to summarize and break down the steps I took to create this site and how I configured Nuxt to generate a static site that serves dynamic markdown content.
 
-### Getting started:
+## Getting started:
 So first things first, we need to initialize our Nuxt project. You can run either of the following:
 
   + yarn:
@@ -21,7 +21,7 @@ So first things first, we need to initialize our Nuxt project. You can run eithe
 Running either of those will take you through the Nuxt scaffolding CLI and will give you options to choose how you want your Nuxt application setup. This is the setup I'll be using:
 
 <img alt="creating a markdown blog with nuxt"
-     title="nuxt blog setup"
+     title="nuxt markdown blog setup"
      style="height: auto;
      margin-bottom: 15px;
      width: 100%;
@@ -32,10 +32,10 @@ Next we want to install:<br>
 [@nuxtjs/markdownit](https://www.npmjs.com/package/@nuxtjs/markdownit) - A markdown parser which will convert your markdown into html, and allow for use in your Vue components.
 
   + yarn: `yarn add @nuxtjs/markdownit`
-  + npx: `npm i @nuxtjs/markdownit`
+  + npm: `npm i @nuxtjs/markdownit`
 
 
-### Configuration:
+## Configuration:
 Once you have that installed, go into your `nuxt.config.js` file and add the newly installed package to your modules property array like so:
 
 <p style="margin-bottom: 5px; text-align: center;">
@@ -166,19 +166,19 @@ Add the `generate` property to your config file above your build configuration a
 Once all this is done, go to your terminal and run either of the following below to test that your routes were created locally.
 
 + yarn: `yarn dev`
-+ npx: `npm run dev`
++ npm: `npm run dev`
 
 visit: `localhost:3000/article/<markdown_file>`
 
 To spin up your static deployment bundle run:
 + yarn: `yarn generate && yarn start`
-+ npx: `npm run generate && npm run start`
++ npm: `npm run generate && npm run start`
 
-### Conclusion:
+## Conclusion:
 That's it, you should now have a static blog site up and running, the only thing left for you to do is style your page and optionally highlight your markdown syntax.
 
 For markdown hightlighting I've seen people use: [highlight.js](https://www.npmjs.com/package/highlightjs)
 <br>
 For this site(elijahkotyluk.com/article/nuxt_md_blog), I used SCSS :)
 
-Feedback or Criticism?: elijah@elijahkotyluk.com
+If you have any feedback, feel free to reach out: elijah@elijahkotyluk.com [@elijahdavidk](https://twitter.com/elijahdavidk)
