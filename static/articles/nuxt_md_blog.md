@@ -181,4 +181,6 @@ For markdown hightlighting I've seen people use: [highlight.js](https://www.npmj
 <br>
 For this site(elijahkotyluk.com/article/nuxt_md_blog), I used SCSS :)
 
-If you have any feedback, feel free to reach out: elijah@elijahkotyluk.com [@elijahdavidk](https://twitter.com/elijahdavidk)
+If you have any feedback, feel free to reach out:
+<br>
+email: elijah@elijahkotyluk.com twitter: [@elijahdavidk](https://twitter.com/elijahdavidk)
