@@ -32,15 +32,7 @@ export default {
       articles: [
         {
           title: 'Create a static blog with nuxt + markdown',
-          to: '/article/nuxt_md_blog'
-        },
-        {
-          title: 'What is Nuxt?',
-          to: '/article/what_is_nuxt'
-        },
-        {
-          title: 'What is Vuex?',
-          to: '/article/what_is_nuxt'
+          to: '/article/static-blog-markdown-nuxt'
         }
       ]
     }
