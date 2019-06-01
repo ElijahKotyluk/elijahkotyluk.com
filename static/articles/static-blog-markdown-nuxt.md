@@ -53,7 +53,7 @@ Once you have that installed, go into your `nuxt.config.js` file and add the new
   ],
   ...
 ```
-After you've done this, the next thing you want to do is get your directories set up to look something like this:
+After you've done this, the next thing you want to do is get your project directory set up to look something like this:
 
 <img alt="nuxt static blog directory setup"
      title="nuxt blog directory"
