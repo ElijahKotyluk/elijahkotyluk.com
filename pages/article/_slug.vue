@@ -96,9 +96,13 @@ export default {
   }
 
   p {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 20px;
     text-align: left;
+
+    @media (max-width:600px) {
+      font-size: 14px;
+    }
   }
 
   pre {
