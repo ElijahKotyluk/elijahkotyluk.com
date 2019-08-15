@@ -38,11 +38,25 @@ export default {
           technologies: ['Vue.js', 'Typescript']
         },
         {
-          title: 'OnyxJS',
+          title: 'Onyx',
           ariaLabel: 'Onyx',
           description: 'An open source unit testing library in early stages of development. Onyx will provide you with all necessary tools to test your Javascript.',
           externalLink: 'https://github.com/onyxjs/onyx',
           technologies: ['Typescript']
+        },
+        {
+          title: 'Bēkn',
+          ariaLabel: 'Bēkn',
+          description: 'Bēkn creates a way for users to browse community based opportunities nearby, and aims to empower individuals into action making it easier for them to join causes addressing issues as a collective.',
+          externalLink: 'https://www.bekn.org',
+          technologies: ['Vue.js', 'Firebase', 'Materialize.css', 'Python', 'Flask']
+        },
+        {
+          title: 'webpack-scaffold-ek',
+          ariaLabel: 'Webpack Scaffold EK',
+          description: 'An interactive scaffold built with Webpack and Yeoman, allows you to spin up a project with everything already configured.',
+          externalLink: 'https://github.com/ElijahKotyluk/webpack-scaffold-ek',
+          technologies: ['Webpack', 'Yeoman']
         },
         {
           title: 'nuxt-keep',
@@ -64,13 +78,6 @@ export default {
           description: 'Basic realtime chat application.',
           externalLink: 'https://github.com/ElijahKotyluk/vue-firebase-chat',
           technologies: ['Vue.js', 'Firebase', 'Materialize.css']
-        },
-        {
-          title: 'vue-gcloud-scaffold',
-          ariaLabel: 'Vue Gcloud Scaffold',
-          description: 'Vue.js scaffold with webpack, vuex, vue-router for easy static deployment to Google App Engine.',
-          externalLink: 'https://github.com/ElijahKotyluk/vue-gcloud-scaffold',
-          technologies: ['Vue', 'Webpack']
         }
       ]
     }

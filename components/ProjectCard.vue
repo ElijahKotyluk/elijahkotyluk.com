@@ -72,7 +72,7 @@ export default {
 
 <style lang="scss" scoped>
 .project-card-container {
-  width: 275px;
+  width: 300px;
   margin: 10px 10px;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .4),
               0 4px 5px 0 rgba(0, 0, 0, .25),
