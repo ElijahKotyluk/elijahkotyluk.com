@@ -31,11 +31,18 @@ export default {
     return {
       projects: [
         {
-          title: 'vue-flask-calendar',
-          ariaLabel: 'Vue Flask Calendar',
-          description: 'Basic event calendar created with Vue, Moment, Flask, NDB',
-          externalLink: 'https://github.com/ElijahKotyluk/vue-flask-calendar',
-          technologies: ['Vue.js', 'Vuex', 'Moment.js', 'Flask', 'NDB', 'SCSS']
+          title: 'Vuetify',
+          ariaLabel: 'Vuetify',
+          description: 'A material component framework for Vue.js applications.  It aims to provide all the tools necessary to create beautiful content rich applications.',
+          externalLink: 'https://github.com/VuetifyJS/Vuetify',
+          technologies: ['Vue.js', 'Typescript']
+        },
+        {
+          title: 'OnyxJS',
+          ariaLabel: 'Onyx',
+          description: 'An open source unit testing library in early stages of development. Onyx will provide you with all necessary tools to test your Javascript.',
+          externalLink: 'https://github.com/onyxjs/onyx',
+          technologies: ['Typescript']
         },
         {
           title: 'nuxt-keep',
@@ -43,13 +50,6 @@ export default {
           description: 'Google keep clone with Nuxt',
           externalLink: 'https://github.com/ElijahKotyluk/nuxt-keep',
           technologies: ['Nuxt', 'Vuex', 'Vuetify']
-        },
-        {
-          title: 'onyx',
-          ariaLabel: 'Onyx',
-          description: 'Basic Javascript unit testing library.',
-          externalLink: 'https://github.com/ElijahKotyluk/onyx',
-          technologies: ['Javascript']
         },
         {
           title: 'vue-weather-app',
