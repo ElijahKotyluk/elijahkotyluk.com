@@ -1,5 +1,5 @@
 <template>
-  <section class="section-container">
+  <section class="section-container project-section-container">
     <div class="heading-container">
       <h3 class="projects-heading">
         Things I've Built
@@ -42,7 +42,7 @@ export default {
           ariaLabel: 'Onyx',
           description: 'An open source unit testing library in early stages of development. Onyx will provide you with all necessary tools to test your Javascript.',
           externalLink: 'https://github.com/onyxjs/onyx',
-          technologies: ['Typescript']
+          technologies: ['Typescript', 'Node']
         },
         {
           title: 'Bēkn',
@@ -117,6 +117,10 @@ export default {
       margin-left: 20px;
     }
   }
+}
+
+.project-section-container {
+  max-width: 1200px !important;
 }
 
 .projects-content-container {
