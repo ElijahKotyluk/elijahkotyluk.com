@@ -29,7 +29,7 @@ export default {
 <style lang="scss">
 .container {
   margin: 0 auto;
-  max-width: 1100px;
+  max-width: 1400px;
   min-height: 100%;
   padding: 0px 25px;
   display: block;
