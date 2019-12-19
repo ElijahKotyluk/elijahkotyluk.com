@@ -31,7 +31,7 @@
 <script>
 export default {
   name: 'About',
-  data() {
+  data () {
     return {
       skills: [
         'JavaScript', 'Vue/Nuxt', 'React', 'Node.js', 'Webpack', 'MongoDB', 'Python', 'Flask', 'NDB', 'Make GNU', 'HTML5', 'SCSS/SASS'

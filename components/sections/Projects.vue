@@ -27,7 +27,7 @@ export default {
   components: {
     ProjectCard
   },
-  data() {
+  data () {
     return {
       projects: [
         {
@@ -56,6 +56,7 @@ export default {
           ariaLabel: 'Webpack Scaffold EK',
           description: 'An interactive scaffold built with Webpack and Yeoman, allows you to spin up a project with everything already configured.',
           externalLink: 'https://github.com/ElijahKotyluk/webpack-scaffold-ek',
+          npm: true,
           technologies: ['Webpack', 'Yeoman']
         },
         {
