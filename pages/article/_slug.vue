@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  async asyncData({ params }) {
+  async asyncData ({ params }) {
     const article = await import(`~/static/articles/${params.slug}.md`)
     return {
       content: article

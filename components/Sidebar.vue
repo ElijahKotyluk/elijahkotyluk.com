@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar-container" :class="{ 'show-sidebar': hideSidebar}">
+  <div :class="{ 'show-sidebar': hideSidebar}" class="sidebar-container">
     <div class="sidebar-items">
       <ul class="menu-list">
         <li v-for="(item, i) in menu" :key="i" class="menu-item">
@@ -21,12 +21,12 @@ export default {
       default: () => []
     }
   },
-  data() {
+  data () {
     return {
       hideSidebar: true
     }
   },
-  mounted() {
+  mounted () {
     this.$root.$on('toggleSidebar', (val) => {
       // Show || Hide sidebar depending on val:
       this.hideSidebar = !this.hideSidebar

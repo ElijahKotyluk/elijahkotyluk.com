@@ -1,5 +1,5 @@
 <template>
-  <div class="toolbar" :class="{ 'toolbar--hidden': !showToolbar }">
+  <div :class="{ 'toolbar--hidden': !showToolbar }" class="toolbar">
     <div class="nav">
       <a href="/">
         <site-logo />
@@ -35,14 +35,14 @@ export default {
       default: () => []
     }
   },
-  data() {
+  data () {
     return {
       showToolbar: true,
       lastScrollPos: 0,
       isActive: false
     }
   },
-  mounted() {
+  mounted () {
     // Add on scroll event listener:
     window.addEventListener('scroll', this.onScroll)
 
@@ -53,12 +53,12 @@ export default {
       }
     })
   },
-  beforeDestroy() {
+  beforeDestroy () {
     // Remove scroll event listener before component is destroyed:
     window.removeEventListener('scroll', this.onScroll)
   },
   methods: {
-    onScroll() {
+    onScroll () {
       // Get current scroll position
       const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop
 
@@ -76,7 +76,7 @@ export default {
       // Set current scroll position as last scroll position
       this.lastScrollPos = currentScrollPos
     },
-    toggleSidebar() {
+    toggleSidebar () {
       this.isActive = !this.isActive
       this.$root.$emit('toggleSidebar', this.isActive)
     }
