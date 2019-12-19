@@ -18,7 +18,7 @@ export default {
     Sidebar,
     SocialIcons
   },
-  data() {
+  data () {
     return {
       hideSidebar: true,
       menu: [
@@ -39,7 +39,7 @@ export default {
   },
   watch: {
     // If the route is not index then replace this.menu's data:
-    $route() {
+    $route () {
       if (this.$route.name === 'article-slug') {
         this.menu = [
           {
@@ -50,7 +50,7 @@ export default {
       }
     }
   },
-  mounted() {
+  mounted () {
     if (this.$route.name !== 'index') {
       this.menu = [
         {
