@@ -35,21 +35,29 @@ export default {
           ariaLabel: 'Vuetify',
           description: 'A material component framework for Vue.js applications.  It aims to provide all the tools necessary to create beautiful content rich applications.',
           externalLink: 'https://github.com/VuetifyJS/Vuetify',
-          technologies: ['Vue.js', 'Typescript']
+          technologies: ['Vue.js', 'TypeScript']
+        },
+        {
+          title: 'TS-Lexer',
+          ariaLabel: 'TS Lexer',
+          description: 'A simple Lexer written in TypeScript',
+          externalLink: 'https://github.com/ElijahKotyluk/TS-Lexer',
+          npm: true,
+          technologies: ['TypeScript']
         },
         {
           title: 'Onyx',
           ariaLabel: 'Onyx',
           description: 'An open source unit testing library in early stages of development. Onyx will provide you with all necessary tools to test your Javascript.',
           externalLink: 'https://github.com/onyxjs/onyx',
-          technologies: ['Typescript', 'Node']
+          technologies: ['TypeScript', 'Node']
         },
         {
           title: 'Bēkn',
           ariaLabel: 'Bēkn',
           description: 'Bēkn creates a way for users to browse community based opportunities nearby, and aims to empower individuals into action making it easier for them to join causes addressing issues as a collective.',
           externalLink: 'https://www.bekn.org',
-          technologies: ['Vue.js', 'Firebase', 'Materialize.css', 'Python', 'Flask']
+          technologies: ['Vue.js', 'Vuetify', 'TypeScript', 'Firebase', 'Python', 'Flask']
         },
         {
           title: 'webpack-scaffold-ek',
