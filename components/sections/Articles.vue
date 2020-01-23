@@ -33,6 +33,10 @@ export default {
         {
           title: 'Create a static blog with nuxt + markdown',
           to: '/article/static-blog-markdown-nuxt'
+        },
+        {
+          title: 'Testing Vue with Typescript + Jest',
+          to: '/articles/vue-typescript-jest'
         }
       ]
     }
