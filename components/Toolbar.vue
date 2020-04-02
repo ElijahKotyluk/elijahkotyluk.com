@@ -86,7 +86,7 @@ export default {
 
 <style lang="scss">
 .toolbar {
-  height: 100px;
+  height: 65px;
   width: 100%;
   display: flex;
   position: fixed;
@@ -115,7 +115,7 @@ export default {
 .nav {
   display: flex;
   -webkit-box-pack: justify;
-  justify-content: space-between;
+  justify-content: space-around;
   -webkit-box-align: center;
   align-items: center;
   position: relative;
@@ -124,11 +124,9 @@ export default {
 }
 
 .nav-item-container {
-  width: 100%;
   display: flex;
   -webkit-box-align: center;
   align-items: center;
-  justify-content: flex-end;
 
   ol {
     display: flex;
