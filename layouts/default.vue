@@ -20,19 +20,19 @@ export default {
   },
   data () {
     return {
-      hideSidebar: true,
+      hideSidebar: false,
       menu: [
         {
           title: 'About',
           to: '#about'
         },
         {
-          title: 'Articles',
-          to: '#articles'
-        },
-        {
           title: 'Projects',
           to: '#projects'
+        },
+        {
+          title: 'Articles',
+          to: '#articles'
         }
       ]
     }
