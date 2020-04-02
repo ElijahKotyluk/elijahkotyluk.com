@@ -1,29 +1,13 @@
+import * as fs from 'fs'
 import pkg from './package'
 
-const fs = require('fs')
-
- // Array where we will push our routes to:
-const routesArray = []
-
- // Create variable to contain array of markdown files read in our articles directory:
+// Create variable to contain array of markdown files read in our articles directory:
 const files = fs.readdirSync('./static/articles')
 
- // Create a route for each file and push that route to routesArray:
-const createRoutesArray = () => {
-  files.forEach((file) => {
-
-    let name = file.substr(0, file.lastIndexOf('.'))
-    let route = '/article/' + name
-
-     routesArray.push(route)
-  })
-}
-
- const getSlugs = (article, index) => {
-  let slug = article.substr(0, article.lastIndexOf('.'))
+const getSlugs = (article, index) => {
+  const slug = article.substr(0, article.lastIndexOf('.'))
   return `/article/${slug}`
 }
-
 
 export default {
   mode: 'universal',
@@ -73,7 +57,7 @@ export default {
   ** Generate static routes:
   */
   generate: {
-    routes: function() {
+    routes () {
       return files.map(getSlugs)
     }
   },
@@ -85,7 +69,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
+    extend (config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
