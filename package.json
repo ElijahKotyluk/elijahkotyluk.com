@@ -15,6 +15,7 @@
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.4",
     "@nuxtjs/pwa": "^2.6.0",
+    "@octokit/rest": "^17.1.4",
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0"
   },
