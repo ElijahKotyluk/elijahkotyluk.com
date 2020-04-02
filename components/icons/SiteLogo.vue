@@ -39,8 +39,8 @@ export default {
 <style lang="scss">
 #site-logo {
   @media(min-width: 600px) {
-    width: 94.65px;
-    height: 82.53px;
+    width: 35px;
+    height: 35px;
   }
 }
 </style>
