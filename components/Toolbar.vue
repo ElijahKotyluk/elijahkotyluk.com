@@ -6,7 +6,7 @@
       </a>
 
       <nav class="nav-item-container">
-        <a id="hamburger" :class="{ 'active': isActive }" @click="toggleSidebar()">
+        <a :class="{ 'active': isActive }" @click="toggleSidebar()">
           <span />
         </a>
         <ol class="nav-item-list">
@@ -151,56 +151,49 @@ export default {
         color: rgba(53, 109, 128, 1);
       }
     }
-  }
-}
 
-#hamburger {
-  cursor: pointer;
-  padding: 10px 35px 16px 0px;
-  margin-right: 15px;
+    a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background: #9CF5A6;
+      visibility: hidden;
+      border-radius: 5px;
+      transform: scaleX(0);
+      transition: .25s linear;
+    }
+    a:hover:before,
+    a:focus:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+    a:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 7px;
+      border: 1px solid #000;
+      bottom: -2px;
+      left: 0;
+      background: rgba(0, 0, 0, 0);
+      border-radius: 5px;
+      opacity: 0;
+      transform: scalex(0);
+      transition: .5s;
+    }
 
-  @media(min-width: 600px) {
-    display: none;
+    a:after {
+      opacity: .05;
+      transform: scalex(1);
+    }
+
+    a:before {
+      background: rgba(0,0,0,0);
+      box-shadow: 0 0 10px 2px rgba(53, 109, 128, 1);
+    }
   }
-}
-#hamburger span, #hamburger span:before, #hamburger span:after {
-  cursor: pointer;
-  border-radius: 1px;
-  height: 1.5px;
-  width: 35px;
-  background: rgba(25, 209, 255, 1);
-  position: absolute;
-  display: inline-block;
-  content: '';
-}
-#hamburger span:before {
-  top: -10px;
-}
-#hamburger span:after {
-  bottom: -10px;
-}
-/*
-#hamburger span, #hamburger span:before, #hamburger span:after {
-  transition: all 200ms ease-in-out;
-}
-*/
-#hamburger span, #hamburger span:before, #hamburger span:after {
--webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-   -moz-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-     -o-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
-        transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
-}
-#hamburger.active span {
-  background-color: transparent;
-}
-#hamburger.active span:before, #hamburger.active span:after {
-  top: 0;
-}
-#hamburger.active span:before {
-  transform: rotate(45deg);
-}
-#hamburger.active span:after {
-  transform: translateY(-10px) rotate(-45deg);
-  top: 10px;
 }
 </style>
