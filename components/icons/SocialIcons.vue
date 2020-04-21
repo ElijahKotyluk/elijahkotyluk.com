@@ -107,7 +107,7 @@ export default {
     align-items: center;
 
     .social-icon-link {
-      padding: 10px;
+      padding: 7px;
     }
 
     svg {
@@ -121,22 +121,22 @@ export default {
         filter: drop-shadow( 0 0 10px rgba(90, 164, 189, 0.7) );
 
         path {
-          stroke: rgba(181, 174, 174, 1);
+          stroke: rgb(0, 0, 0);
 
           &.github {
             stroke-width: 5px;
           }
 
           &.codepen {
-            stroke-width: .5px;
+            stroke-width: .7px;
           }
 
           &.linkedin {
-            stroke-width: 8px;
+            stroke-width: 9px;
           }
 
           &.twitter {
-            stroke-width: 7px;
+            stroke-width: 10px;
           }
         }
       }
