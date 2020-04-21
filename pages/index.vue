@@ -1,9 +1,6 @@
 <template>
   <div class="container">
-    <intro />
-    <span id="about" />
-    <about />
-<!--
+    <!--
     <span id="articles" />
     <articles />
     <span id="projects" />
@@ -13,13 +10,18 @@
 </template>
 
 <script>
-import Intro from '~/components/sections/Intro.vue'
-import About from '~/components/sections/About.vue'
+import { Octokit } from '@octokit/rest'
+
+const octokit = new Octokit({
+  token: process.env.GITHUB_API_TOKEN
+})
 
 export default {
-  components: {
-    Intro,
-    About
+  components: {},
+  mounted () {
+    octokit.activity.listPublicEventsForUser({ username: 'ElijahKotyluk' }).then((res) => {
+      console.log('res: ', res)
+    })
   }
 }
 </script>
