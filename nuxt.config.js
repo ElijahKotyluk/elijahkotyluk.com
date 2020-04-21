@@ -49,6 +49,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/dotenv',
     '@nuxtjs/pwa',
     ['@nuxtjs/markdownit', { linkify: true }]
   ],
