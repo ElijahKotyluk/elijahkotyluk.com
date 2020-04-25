@@ -1,26 +1,29 @@
 <template>
   <div class="container">
-    <!--
-    <span id="articles" />
-    <articles />
-    <span id="projects" />
-    <projects />
--->
+    <h1 class="title">
+      {{ title }}
+    </h1>
+    <h2 class="subtitle">
+      {{ subtitle }}
+    </h2>
   </div>
 </template>
 
 <script>
-import { Octokit } from '@octokit/rest'
-
-const octokit = new Octokit({
-  token: process.env.GITHUB_API_TOKEN
-})
+import { mapActions } from 'vuex'
 
 export default {
   components: {},
+  data: () => ({
+    subtitle: 'Software Engineer & Open Source Enthusiast',
+    title: 'Elijah Kotyluk'
+  }),
   mounted () {
-    octokit.activity.listPublicEventsForUser({ username: 'ElijahKotyluk' }).then((res) => {
-      console.log('res: ', res)
+    this.getPublicEvents({ username: 'ElijahKotyluk' })
+  },
+  methods: {
+    ...mapActions({
+      getPublicEvents: 'getPublicEvents'
     })
   }
 }
@@ -28,30 +31,24 @@ export default {
 
 <style lang="scss">
 .container {
+  height: 100%;
   margin: 0 auto;
-  max-width: 1400px;
-  min-height: 100%;
-  padding: 0px 25px;
-  display: block;
-}
-
-.maybe-container {
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1.125;
 }
 
 .subtitle {
-  font-weight: 300;
-  font-size: 42px;
+  font-weight: 400;
+  font-size: 1.35rem;
   color: #526488;
-  word-spacing: 5px;
+  word-spacing: .5px;
   padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>
