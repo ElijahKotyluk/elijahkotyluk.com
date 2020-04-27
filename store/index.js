@@ -8,7 +8,7 @@ const octokit = new Octokit({
 
 // State
 export const state = () => ({
-  publicEvents: {}
+  publicEvents: []
 })
 
 // Actions
@@ -22,7 +22,7 @@ export const actions = {
       console.log('[ERR]: ', e)
     }
 
-    commit('setPublicEvents', events)
+    commit('setPublicEvents', events.data)
   }
 }
 
@@ -34,3 +34,16 @@ export const mutations = {
 }
 
 // Getters
+export const getters = {
+  pushEvents (state) {
+    const pushEvents = []
+
+    for (const event of state.publicEvents) {
+      if (event.type === 'PushEvent') {
+        pushEvents.push(event)
+      }
+    }
+
+    return pushEvents
+  }
+}
