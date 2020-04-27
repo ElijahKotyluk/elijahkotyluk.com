@@ -36,14 +36,6 @@ export const mutations = {
 // Getters
 export const getters = {
   pushEvents (state) {
-    const pushEvents = []
-
-    for (const event of state.publicEvents) {
-      if (event.type === 'PushEvent') {
-        pushEvents.push(event)
-      }
-    }
-
-    return pushEvents
+    return state.publicEvents.filter((event) => event.type === 'PushEvent')
   }
 }
