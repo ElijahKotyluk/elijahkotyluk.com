@@ -13,6 +13,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'no-console': 'off'
+    'no-console': 'off',
+    'no-case-declarations': 'off'
   }
 }
